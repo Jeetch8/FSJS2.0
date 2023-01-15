@@ -1,0 +1,77 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Roboto";
+}
+
+/* Navbar */
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    padding-top: 4vh;
+}
+.navbar-container img{
+    width: 100px;
+}
+.list{
+    display: flex;
+    list-style: none;
+    color: grey;
+    gap: 30px;
+    font-size: 15px;
+}
+.grow-list{
+    flex: 1;
+}
+.list-item:first-child{
+    color: black;
+}
+.button-group .nav-button{
+    background-color: #7475DA;
+    color: white;
+    border-color: transparent;
+    border-radius: 7px;
+    height: 40px;
+    width: 100px;
+}
+/* Navbar end */
+
+/* Main section */
+.banner-container{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3vw;
+}
+.banner-container h1{
+    margin-top: 100px;
+    font-size: 50px;
+    color: #3a3b7e;
+    max-width: 25vw;
+}
+.description{
+    font-size: 14px;
+    color: grey;
+    max-width: 20vw;
+}
+.banner-container h1 span{
+    color: #7475DA;
+}
+.banner-container .nav-button{
+    background-color: #7475DA;
+    color: white;
+    border-color: transparent;
+    border-radius: 7px;
+    height: 50px;
+    font-weight: 500;
+    width: 150px;
+    margin-top: 30px;
+}
+.banner-container img{
+    height: 70vh;
+    margin-top: 30px;
+}
+/* Main section end */

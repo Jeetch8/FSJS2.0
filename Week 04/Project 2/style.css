@@ -1,0 +1,85 @@
+/* Default CSS Reset */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+/* Default CSS Reset END */
+
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+/* Navbar END */
+
+/* Hero section */
+.hero-container{
+    display: flex;
+    justify-content: space-between;
+    background-image: url('./images/stethoscope.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-left: 60px;
+    max-width: 100vw;
+    overflow: hidden;
+}
+.hero-left-section{
+    display: flex;
+    align-items: flex-end;
+    padding-top: 40px;
+}
+.hero-heading{
+    font-size: 70px;
+    max-width: 40vw;
+    font-weight: 600;
+    padding-top: 0;
+    margin-top: 10px;
+}
+.hero-btn{
+    background-color: #20BC7E;
+    border: transparent;
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    width: 240px;
+    font-size: 20px;
+    border-radius: 100px;
+}
+.hero-description{
+    max-width: 40vw;
+    color: grey;
+}
+.btnWithAngle{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 25px;
+}
+.hero-right-section{
+    display: flex;
+    margin-right: 32vw;
+}
+.hero-right-section img{
+    position: absolute;
+}
+.center-mouse{
+    margin-top: auto;
+    margin-left: 7vw;
+}
+.img-bg{
+    margin-top: 100px;
+}
+/* Hero section END */

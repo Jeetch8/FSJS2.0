@@ -1,0 +1,161 @@
+/* You can not modify anything from the HTML file */
+/* You can only modify the CSS file */ 
+
+/* Reseting default css */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+/* Reseting default css End */
+
+
+/* Navbar */
+.navbar-container{
+    display: flex;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-container img{
+    width: 100px;
+}
+.list{
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    gap: 50px;
+}
+.list-item:first-child{
+    position: relative;
+    font-size: 23px;
+    font-weight: 600;
+}
+.list-item:first-child::before{
+    content: "";
+    width: 50px;
+    margin-right: auto;
+    margin-left: 8px;
+    margin-top: 27px;
+    height: 1.7px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    background-color: black;
+    position: absolute;
+}
+/* Search bar */
+.button-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search-icon svg{
+    width: 18px;
+}
+.nav-button{
+    background-color: transparent;
+    border-radius: 6px;
+    height: 30px;
+    font-size: 15px;
+    width: 80px;
+
+}
+/* Navbar End */
+
+
+
+/* Hero section */
+.hero-container{
+    position: relative;
+}
+.square{
+    position: absolute;
+    z-index: 1;
+    left: 17vw;
+    top: 35vh;
+}
+.square img{
+    width: 350px;
+}
+img[alt="person-hero-iamge"]{
+    position: absolute;
+    z-index: 1000;
+    height: 500px;
+    left: 9vw;
+    margin-top: 50px;
+}
+.hero-container span:nth-child(3){
+    position: absolute;
+    right: 55vw;
+    bottom: 20vh;
+}
+.hero-container span:nth-child(2){
+    position: absolute;
+    right: 10vw;
+    margin-top: 40px;
+}
+.hero-container span:nth-child(2) img{
+    width: 40px;
+}
+.hero-container span:nth-child(3) img{
+    width: 30px;
+}
+.globe{
+    position: absolute;
+    right: 41vw;
+}
+.globe img{
+    height: 50px;
+}
+.hero-container-right{
+    padding-top: 80px;
+    margin-left: 40vw;
+    text-align: center;
+}
+.hero-heading{
+    font-size: 60px;
+}
+.hero-description{
+    max-width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    margin-bottom: 10vh;
+    font-family: "Poppins",sans-serif;
+}
+.button-email{
+    background-color: transparent;
+    font-family: "Orbitron", sans-serif;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.button-join{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    font-family: "Orbitron", sans-serif;
+    margin-bottom: 18vh;
+}
+.contact-heading{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+.icons{
+    position: absolute;
+    display: flex;
+}
+.icons span{
+    position: absolute;
+}
+.icons img{
+    width: 30px;
+}
+/* Hero section End */

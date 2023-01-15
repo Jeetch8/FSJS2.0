@@ -1,0 +1,94 @@
+/* You can not modify anything in the HTML */
+/* You can only modify the CSS file */
+
+/* Importing font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Reseting default css */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+/* Reseting default css End */
+
+
+/* Navbar */
+.navbar{
+    display: flex;
+    padding: 15px 40px 15px 40px;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+}
+.navbar img{
+    width: 90px;
+}
+.line{
+    background-color: white;
+    color: white;
+    height: 50px;
+    width: 1px;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+.grow-list{
+    flex: 1;
+}
+.list{
+    display: flex;
+    font-size: 15px;
+    list-style: none;
+    gap: 80px;
+}
+.button-small{
+    background-color: rgb(164, 67, 164);
+    color: white;
+    height: 35px;
+    width: 135px;
+    border-radius: 8px;
+}
+/* Navbar End */
+
+
+/* Hero section */
+.hero{
+    background-image: url('./assets/bg.png');
+    background-size:auto;
+    background-repeat: no-repeat;
+    height: 89.5vh;
+    width: 100vw;
+    background-position: top;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ .hero-heading{
+    padding: 0;
+    margin: 0;
+    font-size: 65px;
+    max-width: 40vw;
+    text-align: center;
+    margin-bottom: 0;
+}
+.hero-description{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.button-large{
+    background-color: rgb(164, 67, 164);
+    border-color: transparent;
+    color: white;
+    font-weight: 600;
+    height: 40px;
+    width: 250px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+/* Hero section End */

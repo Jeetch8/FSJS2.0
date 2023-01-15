@@ -1,0 +1,63 @@
+/* Resetting deafult CSS */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    background-color: #f9f5ed;
+}
+/* Resetting deafult CSS END */
+
+/* Navbar */
+nav{
+    display: flex;
+    align-items: center;
+    padding-left: 3vw;
+    padding-top: 2vh;
+}
+.nav-list{
+    margin-left: 40px;
+    list-style: none;
+    display: flex;
+    gap: 90px;
+}
+/* Navbar END */
+
+/* Hero section */
+.hero-container{
+    padding-left: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-heading{
+    font-size: 50px;
+    max-width: 400px;
+    font-weight: 600;
+}
+.hero-btn{
+    background-color: #3b855b;
+    border: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    height: 40px;
+    width: 130px;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+.hero-right{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 20px;
+}
+.topPicSec{
+    gap: 10px;
+    display: flex;
+}
+.hero-right img:first-child{
+    margin-top: auto;
+}
+/* Hero section END */
