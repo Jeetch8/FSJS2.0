@@ -1,3 +1,5 @@
+## [Published blog link](https://jeetch.hashnode.dev/introduction-to-web-and-html "Click the link") 
+
 ![Globe image for blog back cover](./e4c84b3d-cf84-4b16-af75-7e16e6ee0fc7.webp)
 Have you ever wondered how the internet works, how we can watch our favourite movies on Netflix from our cosy homes or being able to buy our favourite stuff without having to visit a store?
 

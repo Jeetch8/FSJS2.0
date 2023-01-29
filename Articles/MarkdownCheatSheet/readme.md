@@ -1,3 +1,5 @@
+## [Published blog link](https://jeetch.hashnode.dev/markdown-cheat-sheet "Click the link") 
+
 ![Blog back cover of markdown logo](./1_BgnYogdj5-YCTXtC3lCKYQ.webp)
 `Markdown` is a markup language for formatting text using simple syntaxes. It is widely used for blogging, websites, comment management services, readme files, and documentation. Unlike HTML, markdown doesn't have tags to define structure and features. The markdown syntaxes are combinations of special characters with plain texts.
 
