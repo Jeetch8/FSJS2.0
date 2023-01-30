@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .circle {
+        opacity: 0;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        border-radius: 100%;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const body = document.querySelector("body");
+
+    const randomColorGenerator = () => {
+      return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+        Math.random() * 256
+      )}, ${Math.floor(Math.random() * 256)})`;
+    };
+    console.log(randomColorGenerator());
+
+    window.addEventListener("click", (e) => {
+      const newDiv = document.createElement("div");
+      newDiv.classList.add("circle");
+      // newDiv.classList.add("circle-animation");
+      newDiv.style.top = `${e.clientY - 50}px`;
+      newDiv.style.left = `${e.clientX - 50}px`;
+      newDiv.animate(
+        {
+          borderColor: [
+            randomColorGenerator(),
+            randomColorGenerator(),
+            randomColorGenerator(),
+            randomColorGenerator(),
+            randomColorGenerator(),
+          ],
+          scale: [1, 1.5, 2],
+          opacity: [1],
+        },
+        3000
+      );
+      body.appendChild(newDiv);
+    });
+  </script>
+</html>
