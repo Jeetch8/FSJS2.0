@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./script.js" defer></script>
     <style>
       body {
         padding: 0;
@@ -21,23 +20,35 @@
         border-radius: 100%;
         border: 2px solid black;
       }
+      .instructions {
+        display: flex;
+        top: 30%;
+        left: 30%;
+        position: absolute;
+        color: grey;
+        font-size: 18px;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="instructions">
+      Please Click anywhere on the page to create a circle
+    </div>
+  </body>
   <script>
     const body = document.querySelector("body");
+    const instructDiv = document.querySelector(".instructions");
 
     const randomColorGenerator = () => {
       return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
         Math.random() * 256
       )}, ${Math.floor(Math.random() * 256)})`;
     };
-    console.log(randomColorGenerator());
+    randomColorGenerator();
 
     window.addEventListener("click", (e) => {
       const newDiv = document.createElement("div");
       newDiv.classList.add("circle");
-      // newDiv.classList.add("circle-animation");
       newDiv.style.top = `${e.clientY - 50}px`;
       newDiv.style.left = `${e.clientX - 50}px`;
       newDiv.animate(
@@ -49,12 +60,13 @@
             randomColorGenerator(),
             randomColorGenerator(),
           ],
-          scale: [1, 1.5, 2],
-          opacity: [1],
+          scale: [1, 1.35, 1.65, 1.8, 2],
+          opacity: [1, 1, 1, 1, 1, 1],
         },
         3000
       );
       body.appendChild(newDiv);
+      instructDiv.style.opacity = 0;
     });
   </script>
 </html>
