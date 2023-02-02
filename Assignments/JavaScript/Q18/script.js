@@ -1,8 +1,8 @@
-// Program which tells the number of days in a month
+// Program which tells the number of days in a month in a leap year
 
 const data = {
   january: 31,
-  february: 28,
+  february: 29,
   march: 31,
   april: 30,
   may: 31,
@@ -19,5 +19,5 @@ const userInput = prompt("Please enter month to know the days");
 alert(
   `There are ${
     data[userInput.toLowerCase()]
-  } days in ${userInput.toLowerCase()}`
+  } days in ${userInput.toLowerCase()} of leap year`
 );
