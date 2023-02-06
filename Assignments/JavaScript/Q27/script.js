@@ -1,9 +1,15 @@
-for (let num = 0; num <= 100; num++) {
-  const isPrime = (num) => {
-    for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
-      if (num % i === 0) return false;
+// Write all prime numbers between 0 and 100 (including 0 and 100)
+
+const numArr = [];
+for (let p = 0; p <= 100; p++) {
+  const innerArr = [];
+  for (let i = 1; i <= p; i++) {
+    if (p % i === 0) {
+      innerArr.push(i);
     }
-    return num > 1;
-  };
-  console.log(isPrime);
+  }
+  if (innerArr[0] == 1 && innerArr[1] == p) {
+    numArr.push(p);
+  }
 }
+console.log(numArr);
