@@ -1,0 +1,438 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #111010;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 30px 60px 30px 40px;
+    justify-content: space-between;
+}
+nav button{
+    background-color: #0c8bfd;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    color: gray;
+    gap: 40px;
+}
+nav img{
+    width: 120px;
+}
+.heroSection{
+    color: white;
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+}
+.leftHeroSec h1{
+    font-size: 47px;
+    font-weight: 400;
+    width: 400px;
+}
+.leftHeroSec span{
+    color: #0c8bfd;
+    font-weight: 500;
+    font-style: italic;
+}
+.leftHeroSec p{
+    color: gray;
+    width: 400px;
+    margin: 30px 0 60px 0;
+}
+.heroSecBtn{
+    display: flex;
+    gap: 25px;
+}
+.heroSecBtn button:first-child{
+    background-color: #0c8bfd;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+.heroSecBtn button{
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 22px;
+}
+.heroSecBtn button:last-child{
+    background-color: transparent;
+    border: 1px solid white;
+}
+.horBrands{
+    display: flex;
+    background-color: #1d1c1c;
+    justify-content: space-between;
+    padding: 30px 150px;
+    margin-top: 70px;
+}
+.horBrands img{
+    width: 120px;
+}
+
+/* featuresSec */
+
+.featuresSec{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    align-items: center;
+}
+.featuresHead p{
+    color: gray;
+    text-align: center;
+}
+.featuresHead{
+    margin-bottom: 40px;
+}
+.features{
+    display: grid;
+    grid-template-columns: repeat(3,20vw);
+    gap: 5vw;
+    text-align: center;
+}
+.features div:first-child, .features div:last-child{
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+.features p{
+    color: grey;    
+}
+.featureCard1, .featureCard2, .featureCard3{
+    padding: 25px 0;
+}
+.features img{
+    width: 90px;
+}
+.featureCard2{
+    background-color: #111010;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.featureCard1, .featureCard3{
+    margin-top: 40px;
+}
+.advanceFeatures h1{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.eadvanceFeaturesOptions{
+    display: flex;
+    margin-bottom: 90px;
+}
+.advanceOptionList{
+    list-style: none;
+    margin-right: 80px;
+}
+.advanceOptionList li{
+    display: flex;
+    margin-bottom: 17px;
+    width: 370px;
+    padding: 3px 20px;
+    font-weight: 600;
+    border: 1px solid grey;
+    border-radius: 40px;
+    justify-content: space-between;
+}
+.advanceOptionList li:first-child{
+    background-color: #0c8bfd;
+    border-radius: 40px;
+    justify-content: space-between;
+    padding: 3px 20px;
+    color: white;
+}
+.advanceOptionList img{
+    width: 20px;
+}
+
+.advanceFeaturesRadio{
+    padding: 20px 13px;
+    border-radius: 15px;
+    background-color: #111010;
+}
+.advanceFeaturesRadio li{
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 8px;
+    width: 370px;
+    background-color: #292828;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 30px;
+}
+.pricingSec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricingHead{
+    display: flex;
+    margin-top: 40px;
+}
+.pricingHead h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+}
+.pricingHead img:last-child{
+    width: 35px;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+.pricingHead img:first-child{
+    width: 35px;
+    margin-right: 80px;
+    margin-top: 80px;
+}
+.pricingCardDiv{
+    display: grid;
+    grid-template-columns: repeat(3,20vw);
+    gap: 30px;
+}
+.pricingCardDiv div:first-child, .pricingCardDiv div:last-child{
+    background-color: white;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 18px;
+}
+.pricingCardDiv div:nth-child(2){
+    background-color: #0c8bfd;
+    border-radius: 18px;
+    padding: 20px 20px;
+}
+.pricingCardDiv h3{
+    font-size: 21px;
+    padding: 0;
+    margin: 0;
+}
+.pricingCardDiv h1{
+    font-size: 33px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+.pricingCardDiv h1 span{
+    color: gray;
+    font-size: 20px;
+}
+.pricingCardDiv p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.pricingCardDiv div:nth-child(2) h1 span{
+    color: #85c5fe;
+}
+.priceCardLine{
+    width: 100%;
+    height: 1px;
+    background-color: #e7e7e7;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+.pricingCardDiv{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.pricingCardDiv li{
+    list-style:none;
+    margin: 0;
+    margin-left: -36px;
+    text-align: left;
+    padding: 0;
+}
+.pricingCardDiv li::before{
+    content: url('./blue-tick.svg');
+    margin-right: 10px;
+}
+.pricingCardDiv ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 15px;
+}
+.pricingCardDiv div:nth-child(2) ul li::before{
+    content: url(./white-tick.svg);
+    margin-right: 10px;
+}
+.pricingCardDiv button{
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 260px;
+    background-color:#0c8bfd;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+.pricingCardDiv div:nth-child(2) button{
+    background-color: white;
+    color: #0c8bfd;
+}
+
+/* Pricing Section End */
+
+.testemonySec{
+    background-color: white;
+    color: black;
+    padding: 40px 50px;
+}
+.testemonySec h1{
+    font-size: 40px;
+    font-weight: 500;
+    width: 300px;
+}
+.testemonySecHead{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.testemonySecHead p{
+    color: gray;
+    width: 380px;
+}
+.testemonyCardDiv{
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+.testemonyCard1{
+    background-color: #111010;
+    color: white;
+    border-radius: 15px;
+    padding: 25px 35px 25px 20px;
+}
+.testemonyCard1 div:first-child img{
+    width: 18px;
+}
+.testemonyRating img{
+    width: 20px;
+}
+.testemonyCard2{
+    background-color: white;
+}
+.testemonyCardDiv h4{
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    margin-top: 7px;
+    margin-bottom: 30px;
+} 
+.testemonyCardDiv h3{
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+}
+.testemonyCard1 p, .testemonyCard2 p{
+    width: 30vw;
+    font-size: 18px;
+    line-height: 26px;
+}
+.testemonyCard2{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 25px 35px 25px 20px;
+}
+.testemonySecLine{
+    width: 100%;
+    height: 4px;
+    background-color: rgb(235, 234, 234);
+    margin-top: 50px;
+}
+.blueTesttemonyLine{
+    background-color: #0c8bfd;
+    width: 200px;
+    height: 4px;
+}
+
+
+/* Footer */
+
+footer{
+    padding: 50px;
+}
+footer h1{
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    width: 50vw;
+    margin: 0 auto 40px auto;
+}
+.newsletterSubmit{
+    background-color: #292828;
+    padding: 40px 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+}
+.newsletterSubmit input{
+    background-color: #3e3d3d;
+    border: none;
+    height: 50px;
+    width: 270px;
+    border-radius: 30px;
+    padding: 0 20px;
+    outline: none;
+}
+.newsletterSubmit button{
+    background-color: #0c8bfd;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 130px;
+    border-radius: 30px;
+    color: white;
+}
+.footerLine{
+    width: 100%;
+    background-color:#292828;
+    height: 2px;
+    margin-top: 70px;
+}
+.extraLinkDiv{
+    display: flex;
+    justify-content: space-around;
+}
+.extraLinkDiv ul{
+    list-style: none;
+    font-size: 14px;
+}
+.extraLinkDiv ul li:first-child{
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+.extraLinkDiv li{
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+footer img{
+    width: 120px;
+    margin-top: 30px;
+}
