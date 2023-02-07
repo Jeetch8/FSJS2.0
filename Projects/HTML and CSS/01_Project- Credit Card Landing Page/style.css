@@ -1,0 +1,361 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* *{
+    outline: 0.1px solid orange;
+} */
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #151515;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.flex{
+    display: flex;
+}
+
+nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 10px 60px 10px 50px;
+}
+nav img{
+    width: 100px;
+}
+.nav-list{
+    width: 330px;
+    list-style: none;
+    justify-content: space-between;
+}
+.nav-extra-options{
+    list-style: none;
+    justify-content: space-between;
+    width: 150px;
+}
+.nav-extra-options select{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.nav-extra-options button{
+    background-color: transparent;
+    border: none;
+    padding-left: 15px;
+    color: white;
+    background-image: url(./Project1-CreditCardLandingPage/Assets/Icons/btn-pink-bg.svg);
+    background-repeat: no-repeat;
+}
+.heroSec{
+    justify-content: space-between;
+    width: 100vw;
+    display: flex;
+}
+.leftHeroSection{
+    padding: 0 60px 0 40px;
+    margin-top: 40px;
+}
+.leftHeroSection h1{
+    font-size: 60px;
+    font-weight: 300;
+    width: 650px;
+}
+.leftHeroSection h1 span{
+    color: #F637EC;
+    font-weight: 500;
+    margin-left: 2px;
+}
+.leftHeroSection p{
+    font-weight: 100;
+    width: 520px;
+    word-spacing: 2px;
+    letter-spacing: 1.1px;
+}
+.leftHeroSection button{
+    background-color: transparent;
+    border: none;
+    font-size: 16.5px;
+    color: white;
+    font-weight: 600;
+    background-image: url(./Project1-CreditCardLandingPage/Assets/Icons/btn-pink-bg.svg);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin: 60px 0 60px 0;
+}
+.companyStats{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.companyStats p{
+    display: flex;
+    gap: 3px;
+    width: 200px;
+    font-weight: 300;
+    margin-left: 18px;
+    align-items: top;
+}
+.activeUsers{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ .companyStats h1{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+ }
+.yearsExperince{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+.rightHeroSection{
+    /* position: absolute; */
+    right: -25vw;
+    padding-top: 30px;
+}
+
+.rightHeroSection img{
+    width: 75%;
+}
+
+
+.rightHeroSectionInner{
+    position: absolute;
+    right: -25vw;
+    background-image: url(./Project1-CreditCardLandingPage/Assets/Photos/backCards.png);
+    background-size: 75%;   
+    background-position-x: 10vw;
+    background-repeat: no-repeat;
+    /* margin-left: auto; */
+}
+
+/* End of Hero section */
+
+
+.allBrandsHorizontol{
+    background-color: #292929;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 50px 100px;
+}
+.allBrandsHorizontol img{
+    width: 120px;
+}
+.cardFeatures{
+    padding: 30px 50px 50px 50px;
+}
+.cardDescription{
+    display: flex;
+    padding-right: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardDescription h1{
+    font-size: 60px;
+    width: 500px;
+    font-weight: 300;
+}
+.cardDescription span{
+    font-weight: 500;
+    color: #F637EC;
+}
+.cardDescription p{
+    width: 300px;
+    font-weight: 300;
+}
+.featureCards{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+.freeTracsactionCard, .guranteedSaffetyCard{
+    margin-top: 35px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px 20px 50px;
+}
+.featureCards h3{
+    font-weight: 400;
+    font-size: 20px;
+}
+.featureCards img{
+    width: 150px;
+}
+.cloudAccessCard{
+    margin: 0 40px 0 40px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9px 40px 9px 40px;
+    align-self:flex-start;
+    background: linear-gradient(135deg, hsla(24, 4%, 24%, 1) 0%, hsla(0, 0%, 37%, 1) 100%);
+}
+.cloudAccessCard h3{
+    width: 200px;
+    text-align: center;
+}
+
+.cardChoices{
+    background-color: #fceffb;
+    color: black;
+}
+.cardChoices{
+    display: flex;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cardChoices h1{
+    font-size: 50px;
+    font-weight: 400;
+    width: 500px;
+    text-align: center;
+}
+.cardChoices span{
+    color: #F637EC;
+}
+.cardChoices img{
+    width: 80%;
+    margin-top: 40px;
+}
+.cardChoices p{
+    width: 600px;
+    text-align: center;
+    letter-spacing: 1.1px;
+    position: absolute;
+    top: 35vh;
+    line-height: 28px;
+}
+
+.testemonySection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testemonySection h1{
+    font-size: 50px;
+    font-weight: 300;
+    width: 45vw;
+    text-align: center;
+    margin-top: 80px;
+    letter-spacing: 1.1px;
+}
+.testemonySection h1 span{
+    color: #F637EC;
+    font-weight: 500;
+}
+.testemonyCardsGrid{
+    display: grid;
+    margin-top: 15vh;
+    grid-template-columns: repeat(2,30vw);
+    gap: 8vh 7vw;
+}
+.testemonyCard1{
+    background-image: linear-gradient(135deg, hsla(24, 4%, 24%, 1) 0%, hsla(0, 0%, 37%, 1) 100%);
+    border: 1px solid white;
+}
+
+.testemonyCard1, .testemonyCard2, .testemonyCard3, .testemonyCard4{
+    padding: 10px 20px;
+    border: 1px solid gray;
+}
+
+.testemonyCardsGrid img{
+    width: 150px;
+}
+
+.testemonyNav{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10vh;
+    margin-bottom: 14vh;
+}
+.testNav1{
+    background-color: #F637EC;
+    width: 50px;
+    border-radius: 30px;
+    height: 10px;
+}
+.testNav2, .testNav3, .testNav4{
+    background-color:#292929;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+}
+.customizeCard{
+    background-image: url(./Project1-CreditCardLandingPage/Assets/Photos/Rectangle\ 6773.png);
+    height: 50vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.customizeCardInner{
+    background-image: url(./Project1-CreditCardLandingPage/Assets/Photos/Rectangle\ 6774.png);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.customizeCardInner h1{
+    padding-top: 10px;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    width: 40vw;
+}
+.customizeCardInner button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    padding-left: 20px;
+    background-position: left top;
+    background-image: url(./Project1-CreditCardLandingPage/Assets/Icons/btn-pink-bg.svg);
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+.customizeCardContent span{
+    color: black;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 50px 60px 50px;
+}
+footer img{
+    width: 100px;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    font-size: 15px;
+    font-weight: 300;
+}
