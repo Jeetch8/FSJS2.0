@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* *{
+    outline: 1px solid #F4694C;
+} */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.heroSection{
+    background-image: url('./Project3-GamingLandingPage/Assets/Photos/futuristic-bg.png');
+    color: white;
+    background-position: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav1{
+    display: flex;
+    gap: 50px;
+}
+nav img{
+    width: 120px;
+}
+nav div button:first-child{
+    background-color: transparent;
+    color: white;
+}
+nav div button:last-child{
+    background-color: #F4694C;
+    color: white;
+    font-weight: 500;
+    margin-left: 20px;
+    height: 38px;
+    border-radius:2px;
+    width: 100px;
+}
+/* Nav End */
+
+.heroSecContent{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+.heroLeftSec h1{
+    font-size: 55px;
+    font-weight: 500;
+    max-width: 34VW;
+    margin-top: 100px;
+}
+.heroLeftSec p{
+    color: gray;
+    margin-bottom: 40px;
+    max-width: 30vw;
+    font-size: 15px;
+}
+.heroLeftSec div:last-child{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 60px;
+}
+.heroLeftSec button:first-child{
+    background-color: #F4694C;
+    color: white;
+    font-weight: 500;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 2px;
+}
+.heroLeftSec button:last-child{
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    border: 1px solid white;
+    height: 40px;
+    width: 120px;
+    border-radius: 2px;
+}
+.heroRightSec{
+    margin-top: 100px;
+}
+.rightContent{
+    display: flex;
+    align-items: flex-start;
+}
+.rightContent img:first-child{
+    margin-top: 34px;
+    margin-right: 15px;
+}
+/* .rightContent  */
+.rightContent img:last-child{
+    align-self: flex-end;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+.rightContent h2{
+    max-width: 17vw;
+    letter-spacing: 1.1px;
+    font-weight: 400;
+}
+.heroRightVideo{
+    height: 35vh;
+    /* width: 20vw; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.heroRightVideo img{
+    width: 70px;
+}
+
+.gamesSecMainHead{
+    font-size: 28px;
+    text-align: center;
+    max-width: 30vw;
+    margin: 100px auto 40px auto;
+}
+.topGameCards{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.topGameCards1{
+    background-image: url('./Project3-GamingLandingPage/Assets/Photos/image\ 2.png');
+    height: 44vh;
+    width: 280px;
+    background-position: right;
+    background-size:210%;
+    background-repeat: no-repeat;
+}
+.topGameCards2{
+    background-image: url('./Project3-GamingLandingPage/Assets/Photos/image\ 4.png');
+    height: 44vh;
+    width: 280px;
+    background-position: center;
+    background-size:210%;
+    background-repeat: no-repeat;
+}
+.topGameCards3{
+    background-image: url('./Project3-GamingLandingPage/Assets/Photos/image\ 3.png');
+    height: 44vh;
+    width: 280px;
+    background-position: center;
+    background-size:210%;
+    background-repeat: no-repeat;
+}
+.topGameCards4{
+    background-image: url('./Project3-GamingLandingPage/Assets/Photos/Rectangle\ 56.png');
+    height: 44vh;
+    width: 280px;
+    background-position: bottom;
+    background-size:210%;
+    background-repeat: no-repeat;
+}
+.TopCardContent{
+    margin-top: 33vh;
+    background-color: rgba(255, 255, 255,.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.TopCardContent h3{
+    margin: 10px 10px;
+    padding: 0;
+}
+.TopCardContent p{
+    margin: 3px 10px;
+    color: gray;
+    padding: 0;
+}
+.TopCardContent button{
+    background-color: #F4694C;
+    height: 35px;
+    border:  none;
+    color: white;
+    font-weight: 500;
+    width: 100px;
+    margin-right: 10px;
+}
+.gameCardRatings{
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+.adrenalinePumping{
+    display: flex;
+    justify-content: space-between;
+    margin: 20vh 4vw;
+}
+
+.adrenalinePumpingImg{
+    width: 40vw;
+    background-image: url(./Project3-GamingLandingPage/Assets/Photos/Rectangle\ 57.png);
+    height: 50vh;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.adrenalinePumping h1{
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 22vw;
+    margin-bottom: 50px;
+}
+.adrenalinePumping p{
+    max-width: 32vw;
+    line-height: 30px;
+}
+.adrenalinePumping button{
+    width: 140px;
+    height: 40px;
+    margin-top: 40px;
+}
+.adrenalinePumping button:first-child{
+    background-color: #F4694C;
+    color: white;
+    font-weight: 500;
+    border: none;
+    margin-right: 20px;
+}
+.adrenalinePumping button:last-child{
+    background-color: transparent;
+    border:1px solid #F4694C;
+    color: #F4694C;
+}
+.gameRecommededHead{
+    display: flex;
+    margin: 0 50px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.gameRecommededHead h1{
+    width: 20vw;
+    font-size: 27px;
+}
+.arrowButtonDiv{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.arrowBtnLeft{
+    background-color: #fde1db;
+    padding: 10px 10px;
+}
+.arrowBtnRight{
+    padding: 10px 10px;
+    background-color: #F4694C;
+}
+.recommededGameCards{
+    display: grid;
+    grid-template-columns: repeat(2, 36vw);
+    justify-content: center;
+    gap: 90px 20vw;
+}
+.recommededGameCard1, .recommededGameCard2, .recommededGameCard3, .recommededGameCard4{
+    display: flex;
+    gap: 30px;
+}
+
+.recommededGameCards img{
+    width: 250px;
+}
+.recommededGameCards h2{
+    font-size: 27px;
+}
+.recommededGameCards button{
+    height: 38px;
+    width: 120px;
+    background-color: #F4694C;
+    border: none;
+    color: white;
+}
+.recommededGameCards h4{
+    color: #F4694C;
+}
+.recommededGameCards p{
+    color: gray;
+    line-height: 30px;
+    margin: 30px 0;
+}
+.mostPlayedGamesSec{
+    background-color: #000308;
+    color: white;
+}
+.mostPlayedGamesSec h1{
+    color: white;
+    font-size: 30px;
+    padding-top: 50px;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: 500;
+    max-width: 18vw;
+}
+.firstCollagePart{
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-start;
+    gap: 60px;
+    margin-left: 100px;
+    align-self: flex-start;
+}
+.gamseCollage p{
+    max-width: 37vw;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    color: gray;
+}
+.firstCollagePart img{
+    width: 28vw;
+}
+.secondCollagePart{
+    /* position: absolute; */
+    width: 50vw;
+    gap: 50px;
+    background-color: black;
+}
+.secondCollagePart img{
+    width: 300px;
+}
+.gamesOfTheWorldImg{
+    position: absolute;
+    top: 22vh;
+}
+.gamseCollage{
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
+.secondCollagePart img:last-child{
+    width: 300px;
+    height: auto;
+    margin-left: 40px;
+}
+.gamerSection{
+    background-color: black;
+    padding: 20px 50px;
+    color: white ;
+}
+.gamerSectionInner{
+    background-image: url(./Project3-GamingLandingPage/Assets/Photos/Rectangle\ 606.png);
+    height: 40vh;
+    background-size:  80% 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.gamerSectionInner button{
+    background-color: #F4694C;
+    height: 40px;
+    width: 120px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    margin-bottom: 40px;
+}
+.gamerSectionInner h1{
+    font-size: 30px;
+    padding-top: 60px;
+}
+.gamerSectionInner p{
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: black;
+    color: grey;
+    font-size: 15px;
+    padding: 0 100px 0 0;
+    padding-top: 90px;
+    padding-bottom: 30px;
+}
+footer ul{
+    list-style: none;
+}
+footer ul:first-child li:first-child img{
+    width: 110px;
+}
+footer ul:first-child li:nth-child(2){
+    width: 200px;
+    line-height: 28px;
+    margin: 15px 0;
+}
+footer ul:first-child li:last-child img{
+    margin: 0 3px;
+    width: 35px;
+}
+footer ul li:first-child{
+    font-weight: 500;
+    font-size: 17px;
+    color: white;
+}
+footer ul li{
+    line-height: 35px;
+}
+.footerLine div{
+    width: 100%;
+    background-color: gray;
+    height: 1px;
+}
+.footerLine{
+    padding: 0 50px;
+    padding-bottom: 70px;
+    background-color: black;
+    overflow-x: hidden;
+}
