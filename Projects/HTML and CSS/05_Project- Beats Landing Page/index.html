@@ -8,23 +8,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section>
+    <section class="heroSection">
       <nav>
-        <img src="./Photos/beatsLogo.png" alt="" />
+        <div class="navLogoOuter">
+          <img src="./Photos/beatsLogo.png" alt="" />
+        </div>
         <ul>
           <li>Home</li>
           <li>Specs</li>
           <li>Case</li>
           <li>Peoducts</li>
         </ul>
-        <button>Shop</button>
-      </nav>
-      <div>
-        <div>
-          <img src="./Photos/mainImage.png" alt="" />
+        <div class="navBtnOuter">
+          <button>Shop</button>
         </div>
-        <div>
-          <img src="./Photos/onEar.png" alt="" />
+      </nav>
+      <div class="mainDiv">
+        <div class="heroLeftSection">
+          <img src="./Photos/mainImage.png" alt="" class="heroMainPic" />
+          <div></div>
+        </div>
+        <div class="heroRightSection">
+          <img src="./Photos/onEar.png" alt="" class="heroRightSecImg" />
           <h1>Beats 3</h1>
           <h4>Overview</h4>
           <p>
@@ -38,17 +43,27 @@
           </button>
         </div>
       </div>
-      <div>
-        <img src="./Photos/appleLogo.png" alt="" />
-        <img src="./Photos/spotifyLogo.png" alt="" />
-        <img src="./Photos/amazonLogo.png" alt="" />
-        <img src="./Photos/youtubeLogo.png" alt="" />
+      <div class="brandLogoStripe">
+        <div>
+          <img src="./Photos/appleLogo.png" alt="" />
+        </div>
+        <div>
+          <img src="./Photos/spotifyLogo.png" alt="" />
+        </div>
+        <div>
+          <img src="./Photos/amazonLogo.png" alt="" />
+        </div>
+        <div>
+          <img src="./Photos/youtubeLogo.png" alt="" />
+        </div>
       </div>
     </section>
-    <section>
+    <section class="productSpecsSection">
       <div>
-        <img src="./Photos/specsImage.png" alt="" />
-        <div>
+        <img src="./Icons/specsLogo.png" alt="" />
+      </div>
+      <div class="headphoneSpecsSec">
+        <div class="headphoneSpecLeft">
           <div>
             <img src="./Icons/bluetooth.png" alt="" />
             <h4>Connection</h4>
@@ -70,11 +85,16 @@
             <p>Supports Apple Siri and Google</p>
           </div>
         </div>
+        <div class="headphoneSpecRight">
+          <img src="./Photos/specsImage.png" alt="" />
+        </div>
       </div>
       <div>
-        <img src="./Photos/caseImage.png" alt="" />
-        <div>
-          <div>
+        <div class="caseLetterDiv">
+          <img src="./Icons/caseLogo.png" alt="" />
+        </div>
+        <div class="headphoneCaseDiv">
+          <div class="headphoenCaseImg">
             <img src="./Photos/caseImage.png" alt="" />
           </div>
           <div>
@@ -87,70 +107,102 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="immenseMusicSection">
       <div>
-        <h1>Immense yourself in yoru music</h1>
+        <h1>Immense yourself in your music</h1>
         <p>Buy Now, up to 40% off.</p>
         <button>
           <img src="./Icons/shoppingBag.png" alt="" />
           Buy now
         </button>
       </div>
-      <div>
+      <div class="immenseMusicSectionImg">
         <img src="./Photos/buyNowSectionImage.png" alt="" />
       </div>
     </section>
-    <section>
-      <img src="./Icons/productLogo.png" alt="" />
+    <section class="styleChooseSection">
       <div>
-        <div>
-          <img src="./Photos/black.png" alt="" />
-          <div>
-            <div>
-              <h3>Black</h3>
-              <h4>N299K</h4>
+        <img src="./Icons/productLogo.png" alt="" />
+      </div>
+      <div class="allHeaphonesDiv">
+        <div class="productOuterDiv">
+          <div class="productInnerDiv">
+            <div class="productImg">
+              <img src="./Photos/black.png" alt="" />
             </div>
-            <img src="./Icons/shoppingBag.png" alt="" />
+            <div class="productDetails">
+              <div>
+                <h3>Black</h3>
+                <h4>N299K</h4>
+              </div>
+              <button>
+                <img src="./Icons/shoppingBag.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="./Photos/redBlack.png" alt="" />
-          <div>
-            <div>
-              <h3>Red Black</h3>
-              <h4>N299K</h4>
+        <div class="productOuterDiv">
+          <div class="productInnerDiv">
+            <div class="productImg">
+              <img src="./Photos/redBlack.png" alt="" />
             </div>
-            <img src="./Icons/shoppingBag.png" alt="" />
+            <div class="productDetails">
+              <div>
+                <h3>Red Black</h3>
+                <h4>N299K</h4>
+              </div>
+              <button>
+                <img src="./Icons/shoppingBag.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="./Photos/nightBlack.png" alt="" />
-          <div>
-            <div>
-              <h3>Night Black</h3>
-              <h4>N299K</h4>
+        <div class="productOuterDiv">
+          <div class="productInnerDiv">
+            <div class="productImg">
+              <img src="./Photos/nightBlack.png" alt="" />
             </div>
-            <img src="./Icons/shoppingBag.png" alt="" />
+            <div class="productDetails">
+              <div>
+                <h3>NightBlack</h3>
+                <h4>N299K</h4>
+              </div>
+              <button>
+                <img src="./Icons/shoppingBag.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="./Photos/blue.png" alt="" />
-          <div>
-            <div>
-              <h3>Blue</h3>
-              <h4>N299K</h4>
+        <div class="productOuterDiv">
+          <div class="productInnerDiv">
+            <div class="productImg">
+              <img src="./Photos/blue.png" alt="" />
             </div>
-            <img src="./Icons/shoppingBag.png" alt="" />
+            <div class="productDetails">
+              <div>
+                <h3>Blue</h3>
+                <h4>N299K</h4>
+              </div>
+              <button>
+                <img src="./Icons/shoppingBag.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="./Photos/twilightGray.png" alt="" />
-          <div>
-            <div>
-              <h3>Twilight Gray</h3>
-              <h4>N299K</h4>
+        <div class="productOuterDiv">
+          <div class="productInnerDiv">
+            <div class="productImg">
+              <img src="./Photos/twilightGray.png" alt="" />
             </div>
-            <img src="./Icons/shoppingBag.png" alt="" />
+            <div class="productDetails">
+              <div>
+                <h3>Twilight Gray</h3>
+                <h4>N299K</h4>
+              </div>
+              <button>
+                <img src="./Icons/shoppingBag.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -173,14 +225,14 @@
       </ul>
       <ul>
         <li>
-          <div>
+          <div class="subscribeArea">
             <input type="text" placeholder="Email" />
             <button>
               <img src="./Icons/rightArrow.png" alt="" />Subscribe
             </button>
           </div>
         </li>
-        <li>
+        <li class="socialIcons">
           <img src="./Icons/facebook.png" alt="" />
           <img src="./Icons/twitter.png" alt="" />
           <img src="./Icons/instagram.png" alt="" />
@@ -188,7 +240,7 @@
         </li>
       </ul>
     </footer>
-    <div>
+    <div class="upArrowDiv">
       <img src="./Icons/upArrow.png" alt="" />
     </div>
   </body>

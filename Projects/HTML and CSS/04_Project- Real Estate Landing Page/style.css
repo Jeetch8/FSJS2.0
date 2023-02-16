@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* *{
+    outline: 1px solid #6663e9;
+} */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px 70px 50px;
+    padding: 30px 30px 25px 30px;
+    border-bottom: 1px solid gray;
+}
+nav ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+nav img{
+    width: 120px;
+}
+.heroSection{
+    position: relative;
+    color: white;
+    background-size: 110%;
+    background-image: url(./Photos/mainBackground.png);
+    background-position: 50% 79%;
+    background-repeat: no-repeat;
+}
+.heroSecContent{
+    padding: 30px 50px;
+
+}
+.heroSection h1{
+    font-size: 40px;
+    max-width: 25vw;
+    font-weight: 600;
+}
+.heroSection p{
+    font-size: 15px;
+    color: gray;
+    max-width: 23vw;
+}
+.heroSecContent button{
+    background-color: #6663e9;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 30px;
+    width: 120px;
+    margin-bottom: 200px;
+}
+.logoStripe{
+    display: flex;
+    position: absolute;
+    width: 81.5vw;
+    bottom: -8vh;
+    justify-content: space-between;
+    background-color: white;
+    padding: 40px 100px 40px 100px;
+    border-radius: 10px;
+    margin: 30px 0px 30px 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.logoStripe img{
+    width: 120px;
+}
+.heroSecBackground{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Real estate catelog */
+.catelogHeading{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin: 100px 0;
+}
+.realEstateCatelog{
+    display: grid;
+    grid-template-columns: repeat(3,20vw);
+    grid-template-rows: repeat(3, 40vh);
+    gap: 100px 30px;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+.realEstateCatelog img{
+    width: 200px;
+}
+.realEstateCatelog div:nth-child(1) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage1.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(2) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage2.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(3) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage3.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(4) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage4.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(5) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage5.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(6) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage6.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(7) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage7.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(8) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage8.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.realEstateCatelog div:nth-child(9) .propertyCatelogBg{
+    border-radius:10px;
+    background-image: url(./Photos/cardImage9.png);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 38vh;
+    width: 20vw;
+}
+.propertyCardContent{
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+    padding: 15px 13px;
+    border-radius: 10px;
+    align-items: center;
+    margin: 0 10px;
+    position: absolute;
+    background-color: white;
+    bottom: -15vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.propertyCardContent h3{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.propertyCardContent h4{
+    margin: 0;
+    padding: 0;
+    color: #6663e9;
+    font-size: 17px;
+    margin-top: 3px;
+}
+.propertyCardContent button{
+    background-color: #6663e9;
+    padding: 9px 22px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+.propertyCard{
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.propertFeature1{
+    display: flex;
+}
+.propertFeature2{
+    display: flex;
+}
+.propertFeatureImage{
+    width: 20vw;
+    height: 30vh;
+}
+.propertFeature1 .propertFeatureImage{
+    background-image: url(./Photos/featuresImage1.png);
+    background-position: center;
+    background-size: 120%;
+}
+.propertFeature2 .propertFeatureImage{
+    background-position: center;
+    background-size: 120%;
+    background-image: url(./Photos/featuresImage2.png);
+    /* margin-bottom: 200px; */
+}
+
+.propertFeature1 p, .propertFeature2 p{
+    max-width: 20vw;
+}
+.propertyImageOuter1, .propertyImageOuter2{
+    background-color: #6663e9;
+    padding: 20px;
+    height: 10vh;
+    /* margin-top: 20px; */
+}
+
+
+/* Subscrie to newsletter */
+.newsLetterSubSection{
+    background-color: #6663e9;
+    margin: 50px;
+    border-radius: 30px;
+    height: 45vh;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+.newsLetterSubSection h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.subEmailBox{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+.subEmailBoxInput{
+    display: flex;
+    border-radius: 30px;
+    background-color: #5654d1;
+    padding: 10px 20px;
+
+}
+.subEmailBoxInput input{
+    background-color: transparent;
+    outline: none;
+    color: gray;
+    border: none;
+    padding: 0 120px 0 10px;
+}
+.subEmailBoxInput img{
+    width: 20px;
+}
+.subEmailBox button{
+    background-color: white;
+    color: #5654d1;
+    border: none;
+    border-radius: 30px;
+    padding: 0 25px;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+footer ul{
+    list-style: none;
+}
+.footerRightSec{
+    display: flex;
+    justify-content: space-between;
+    gap: 6vw;
+    padding-right: 60px;
+}
+.footerLeftSec img{
+    width: 130px;
+}
+.footerSocial img{
+    width: 30px;
+}
+.footerSocial{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.footerLeftSec p{
+    font-size: 15px;
+}
+.footerRightSec ul li:first-child{
+    font-weight: 600;
+}
+.footerRightSec ul li{
+    font-weight: 300;
+    line-height: 45px;
+}
