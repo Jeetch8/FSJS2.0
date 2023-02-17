@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.heroSection{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.981127485173757) 50%, rgba(227,242,255,1) 71%, rgba(227,242,255,1) 100%);
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    transform: skewY(-3deg);
+    background-position: 50% 100%;
+    /* transform: rotate(-10deg); */
+}
+.heroSectionBackground{
+    position: absolute;
+    transform: skewY(3deg);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 100px;
+}
+.navRigth{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+.navRigth button{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #722ED1;
+    color:#722ED1;
+    padding: 8px 25px;
+    border-radius: 50px;
+}
+
+.heroSecDiv{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 100px;
+}
+.versionDiv{
+    display: flex;
+    align-items: center;
+    background-color: #f7f1ff;
+    width: fit-content;
+    padding: 6px 15px;
+    gap: 10px;
+    border-radius: 50px;
+    color: #722ED1;
+    font-weight: 500;
+}
+.versionDiv span{
+    text-decoration: underline;
+}
+.heroSecDiv h1{
+    font-size: 43px;
+    max-width: 24vw;
+}
+.heroSecDiv p{
+    color: gray;
+    max-width: 28vw;
+    font-size: 16px;
+    line-height: 25px;
+}
+.heroSecBtn{
+    display: flex;
+    gap: 25px;
+}
+.heroSecBtn button:first-child{
+    background-color: #722ED1;
+    color: white;
+    border: none;
+    font-weight: 500;
+    padding: 9px 20px; 
+    border-radius: 50px;
+}
+.heroSecBtn button:last-child{
+    padding: 9px 20px; 
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    color: #722ED1;
+    font-weight: 500;
+}
+
+.whyQubly{
+    display: flex;
+    background-color:#f7f1ff;
+    width: fit-content;
+    margin: 100px auto 0 auto;
+    gap: 10px;
+    padding: 7px 10px;
+    color: #722ED1;
+    border-radius: 50px;
+}
+.whyQubly img{
+    height: 17px;
+    width: 25px;
+}
+.actionableInsightsSec h1{
+    font-size: 30px;
+    /* text-align: center; */
+}
+.actionableInsightsTop{
+    /* margin: 0 auto; */
+    text-align: center;
+}
+.actionableInsightsTop p{
+    max-width: 50vw;
+    color: gray;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.actionableInsightsBottom{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+.actionableInsightsBottom p{
+    max-width: 20vw;
+    color: gray;
+}
+.actionableInsightsSec p{
+    font-size: 16px;
+}
+
+
+.differentTeamSection p{
+    max-width: 30vw;
+    color: gray;
+}
+.productTeamSection, .engineeringTeamsSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 100px;
+}
+.productTeamTag, .engineeringTeamTag{
+    display: flex;
+    color: #722ED1;
+    gap: 15px;
+    background-color: #f7f1ff;
+    width: fit-content;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.testmonySection{
+    transform: skewY(-4deg);
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* background-color: #722ED1; */
+    height: 75vh;
+    background: rgb(252,248,255);
+    background: linear-gradient(211deg, rgba(252,248,255,1) 0%, rgba(242,248,255,1) 65%, rgba(242,248,255,1) 100%);
+}
+.testemonyInnerSection{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    transform: skewY(4deg);
+}
+.tsetemonyLine{
+    background-color: rgb(223, 218, 218);
+    height: 1.5px;
+    width: 80%;
+}
+.testemonyInnerSection h1{
+    font-size: 28px;
+    max-width: 70vw;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    text-align: center;
+}
+.testemonyInnerSection h2{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.testemonyInnerSection h3{
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 6px;
+    padding: 0;
+}
+.testemonyBrandStrip{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 40px;
+}
+
+.companyFormUsedBySection{
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 100px;
+}
+.worldsBestCompanySection h1{
+    font-size: 29px;
+    max-width: 23vw;
+}
+.trustedByLine{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 50px;
+}
+.textLine{
+    background-color:  rgb(223, 218, 218);
+    width: 125px;
+    height: 1px;
+}
+.worldsBestCompanySectionLogo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+.signUpFormDiv{
+    padding: 0 20px 20px 20px;
+    background-color: #f9f0ff;
+}
+.signUpFormInnerDiv{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    padding: 0 30px;
+}
+.signUpFormDiv button{
+    background-color: #722ED1;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 3px;
+}
+
+
+.signUpFormDiv h3{
+    font-size: 21px;
+}
+.signUpFormInnerDiv input{
+    height: 35px;
+    padding-left: 10px;
+    width: 300px;
+    margin-top: 20px;
+}
+.signUpFormInnerDiv p{
+    font-size: 14px;
+    color: gray;
+    padding-bottom: 10px;
+}
+.registerLine{
+    height: 1.5px;
+    width: 100%;
+    background-color: rgb(223, 218, 218);
+}
+.signUpFormInnerDiv p span{
+    color: #722ED1;
+}
+.signUpFormInnerDiv img{
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.signUpFormInnerDiv h4{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fbfcff;
+    padding: 50px;
+}
+footer ul{
+    list-style: none;
+    line-height: 30px;
+
+}
+footer ul:first-child li:nth-child(2){
+    line-height: 23px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    max-width: 17vw;
+}
+footer ul li:first-child{
+    font-weight: 600;
+    font-size: 18px;
+}
+footer ul li{
+    font-size: 15px;
+}
+.footerSocial{
+    display: flex;
+    gap: 10px;
+}
+.footerSocial img{
+    width: 20px;
+}
+.footerInputDiv{
+    display: flex;
+    margin-top: 20px;
+    background-color: white;
+    gap: 10px;
+    padding: 15px;
+} 
+.footerInputDiv input{
+    border: none;
+    outline: none;
+}
