@@ -2,6 +2,7 @@
 
 /* *{
     outline: 1px solid #F4694C;
+    border: 1px solid aqua;
 } */
 body{
     padding: 0;
@@ -37,11 +38,13 @@ nav img{
 }
 nav div button:first-child{
     background-color: transparent;
+    border: none;
     color: white;
 }
 nav div button:last-child{
     background-color: #F4694C;
     color: white;
+    border: none;
     font-weight: 500;
     margin-left: 20px;
     height: 38px;
@@ -133,6 +136,7 @@ nav div button:last-child{
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 .topGameCards1{
     background-image: url('./Project3-GamingLandingPage/Assets/Photos/image\ 2.png');
@@ -200,12 +204,14 @@ nav div button:last-child{
 }
 .adrenalinePumping{
     display: flex;
-    justify-content: space-between;
-    margin: 20vh 4vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20vh 0;
+    gap: 40px;
 }
 
 .adrenalinePumpingImg{
-    width: 40vw;
+    width: 450px;
     background-image: url(./Project3-GamingLandingPage/Assets/Photos/Rectangle\ 57.png);
     height: 50vh;
     background-size: 150%;
@@ -215,11 +221,11 @@ nav div button:last-child{
 .adrenalinePumping h1{
     font-size: 30px;
     font-weight: 600;
-    max-width: 22vw;
+    max-width: 300px;
     margin-bottom: 50px;
 }
 .adrenalinePumping p{
-    max-width: 32vw;
+    max-width: 300px;
     line-height: 30px;
 }
 .adrenalinePumping button{
@@ -263,16 +269,31 @@ nav div button:last-child{
     background-color: #F4694C;
 }
 .recommededGameCards{
-    display: grid;
-    grid-template-columns: repeat(2, 36vw);
+    /* display: grid; */
     justify-content: center;
-    gap: 90px 20vw;
+    /* gap: 90px 20vw; */
+}
+.recommededGameCardsRow2{
+    display: flex;
+    margin: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.recommededGameCardsRow1{
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+.recommededGameCardsRow1 h2, .recommededGameCardsRow1 p, .recommededGameCardsRow2 h2, .recommededGameCardsRow2 p{
+    max-width: 220px;
 }
 .recommededGameCard1, .recommededGameCard2, .recommededGameCard3, .recommededGameCard4{
     display: flex;
     gap: 30px;
 }
-
 .recommededGameCards img{
     width: 250px;
 }
@@ -316,7 +337,7 @@ nav div button:last-child{
     align-self: flex-start;
 }
 .gamseCollage p{
-    max-width: 37vw;
+    max-width: 370px;
     font-weight: 400;
     line-height: 30px;
     margin-top: 50px;
@@ -342,6 +363,7 @@ nav div button:last-child{
 .gamseCollage{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     overflow-x: hidden;
     padding-bottom: 80px;
 }
@@ -385,6 +407,7 @@ footer{
     display: flex;
     justify-content: space-between;
     list-style: none;
+    flex-wrap: wrap;
     background-color: black;
     color: grey;
     font-size: 15px;
@@ -425,4 +448,83 @@ footer ul li{
     padding-bottom: 70px;
     background-color: black;
     overflow-x: hidden;
+}
+
+
+@media (max-width:930px){
+    .nav1 ul{
+        display: none;
+    }
+    .heroSection h1{
+        font-size: 40px;
+    }
+    .heroSecContent{
+        flex-wrap: wrap;
+    }
+    .gamesSecMainHead{
+        font-size: 23px;
+    }
+    .gameRecommededHead h1{
+        max-width: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width:510px){
+    .heroSection{
+    background-repeat: no-repeat;
+    }
+    .heroSecContent{
+        flex-wrap: wrap-reverse;
+    }
+    .heroLeftSec h1{
+        margin-top: 0;
+        font-size: 30px;
+        max-width: 100%;
+    }
+    .heroLeftSec p{
+        max-width: 70vw;
+    }
+    .heroRightSec .rightContent{
+        display: none;
+    }
+    .heroRightVideo{
+        height: 200px;
+        width: 350px;
+    }
+    .heroRightSec{
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+    .recommededGameCardsRow2, .recommededGameCardsRow1{
+        margin: 20px;
+    }
+    .gameRecommededHead{
+        margin: 20px;
+    }
+    .mostPlayedGamesSec h1{
+        max-width: 300px;
+    }
+    .firstCollagePart img{
+        width: 350px;
+    }
+    .firstCollagePart{
+        margin: 0 auto;
+    }
+    .gamseCollage p{
+        margin-left: 50px;
+    }
+    .secondCollagePart{
+        margin-left: 20px;
+    }
+    .gamerSection{
+        padding: 0;
+        padding-top: 20px;
+    }
+    .gamerSectionInner{
+    background-size:  100% 130%;
+    }
+    .gamerSectionInner h1{
+        padding-top: 20px;
+    }
 }
