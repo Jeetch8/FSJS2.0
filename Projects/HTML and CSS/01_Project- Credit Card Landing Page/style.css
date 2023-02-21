@@ -148,9 +148,11 @@ nav img{
 .allBrandsHorizontol{
     background-color: #292929;
     margin-top: 150px;
+    flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
-    padding: 50px 100px 50px 100px;
+    justify-content: space-evenly;
+    gap: 40px;
+    padding: 50px 50px 50px 50px;
 }
 .allBrandsHorizontol img{
     width: 120px;
@@ -180,7 +182,10 @@ nav img{
 .featureCards{
     margin-top: 90px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding-bottom: 30px;
 }
 .freeTracsactionCard, .guranteedSaffetyCard{
     margin-top: 35px;
@@ -211,12 +216,9 @@ nav img{
     width: 200px;
     text-align: center;
 }
-
 .cardChoices{
     background-color: #fceffb;
     color: black;
-}
-.cardChoices{
     display: flex;
     padding-top: 60px;
     flex-direction: column;
@@ -482,5 +484,61 @@ footer ul{
     footer ul{
         padding-left: 0;
         margin: 0 auto;
+    }
+}
+
+
+@media (min-width:501px) and (max-width:1220px){
+    .heroSec{
+        /* border: 2px solid orange; */
+        flex-wrap: wrap;
+    }
+    .rightHeroSection{
+        max-width: 50vw;
+        width: 500px;
+        padding-bottom: 62vh;
+        
+    }
+    .rightHeroSectionInner{
+        padding-right: 0;
+        right: -20vw;
+        height: 80vh;
+    }
+}
+
+
+@media (min-width:501px) and (max-width:1020px){
+    .nav-list{
+        display: none;
+    }       
+    .heroSec h1{
+        font-size: 40px;
+    }
+    .cardDescription {
+        flex-wrap: wrap;
+    }
+    .cardDescription h1{
+        font-size: 45px;
+    }
+    .cardChoices{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width:501px) and (max-width:850px){
+    .heroSec h1{
+        max-width: 70vw;
+    }
+    .testemonyCardsGrid{
+        grid-template-columns: 40vw 40vw;
+    }
+    .testmonyHeadPara{
+        max-width: 60vw;
+    }
+    .testemonySection h1{
+        font-size: 40px;
+        max-width: 70vw;
+    }
+    .customizeCardContent h1{
+        font-size: 40px;
     }
 }
