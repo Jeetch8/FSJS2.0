@@ -254,7 +254,7 @@ nav img{
 .testemonySection h1{
     font-size: 50px;
     font-weight: 300;
-    width: 45vw;
+    max-width: 45vw;
     text-align: center;
     margin-top: 80px;
     letter-spacing: 1.1px;
@@ -262,6 +262,12 @@ nav img{
 .testemonySection h1 span{
     color: #F637EC;
     font-weight: 500;
+}
+.testmonyHeadPara{
+    font-weight: 300;
+    letter-spacing: 1.1px;
+    max-width: 35vw;
+    text-align: center;
 }
 .testemonyCardsGrid{
     display: grid;
@@ -358,4 +364,123 @@ footer ul{
     gap: 35px;
     font-size: 15px;
     font-weight: 300;
+}
+
+
+
+/* Mobile screens media quries */
+@media (max-width:500px){
+    .nav-list{
+        display: none;
+        background-color: aqua;
+    }
+    nav{
+        padding: 20px;
+    }
+    .heroSec{
+        gap: 100px;
+        flex-wrap: wrap-reverse;
+    }
+    .leftHeroSection{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .leftHeroSection h1{
+        font-size: 30px;
+        max-width: 70vw;
+    }
+    .leftHeroSection p{
+        max-width: 80vw;
+    }
+    .companyStats{
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+    .companyStats .line{
+        transform: rotate(90deg);
+        width: 30px;
+        padding: 0;
+        margin-top: 20px;
+        height: 0;
+        margin-left: 50px;
+    }
+    .rightHeroSection{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    .rightHeroSectionInner{
+        height: 400px;
+        top: 5vh;
+        padding: 20px;
+        padding-top: 50px;
+    }
+    .leftHeroSection button{
+        margin-top: 40px;
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    .allBrandsHorizontol{
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+        padding: 30px 20px 30px 20px;
+        margin-top: 110px;
+    }
+    .cardFeatures .cardDescription h1{
+        font-size: 30px;
+    }
+    .cardDescription{
+        flex-wrap: wrap;
+    }
+    .cardFeatures{
+        padding-left: 40px;
+    }
+    .featureCards{
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+    .cardChoices h1{
+        font-size: 30px;
+        max-width: 70vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .cardChoices p{
+        margin-top: 0;
+        padding-top: 0;
+        max-width: 70vw;
+    }
+    .testemonySection h1{
+        font-size: 30px;
+        max-width: 80vw;
+        padding: 0;
+    }
+    .testmonyHeadPara{
+        max-width: 70vw;
+    }
+    .testemonyCardsGrid{
+        grid-template-columns: 70vw;
+        margin-top: 50px;
+        gap: 20px;
+    }
+    .testemonyCard2, .testemonyCard3, .testemonyCard4{
+        display: none;
+    }
+    .customizeCardContent h1{
+        font-size: 40px;
+    }
+    footer{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    footer ul{
+        padding-left: 0;
+        margin: 0 auto;
+    }
 }
