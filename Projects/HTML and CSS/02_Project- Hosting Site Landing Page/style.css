@@ -7,6 +7,7 @@ body{
     background-color: #111010;
     color: white;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 
 nav{
@@ -37,6 +38,7 @@ nav img{
     display: flex;
     padding: 20px 40px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .leftHeroSec h1{
     font-size: 47px;
@@ -75,13 +77,21 @@ nav img{
 }
 .horBrands{
     display: flex;
+    flex-wrap: wrap;
     background-color: #1d1c1c;
-    justify-content: space-between;
-    padding: 30px 150px;
+    justify-content: space-evenly;
+    padding: 30px 80px;
+    gap: 30px;
     margin-top: 70px;
 }
 .horBrands img{
     width: 120px;
+}
+.rightHeroSec{
+    padding: 10px;
+}
+.rightHeroSec img{
+    max-width: 100%;
 }
 
 /* featuresSec */
@@ -101,10 +111,11 @@ nav img{
     margin-bottom: 40px;
 }
 .features{
-    display: grid;
-    grid-template-columns: repeat(3,20vw);
+    display: flex;    
     gap: 5vw;
+    flex-wrap: wrap;
     text-align: center;
+    justify-content: space-evenly;
 }
 .features div:first-child, .features div:last-child{
     border: 1px solid gray;
@@ -114,7 +125,7 @@ nav img{
     color: grey;    
 }
 .featureCard1, .featureCard2, .featureCard3{
-    padding: 25px 0;
+    padding: 25px 20px;
 }
 .features img{
     width: 90px;
@@ -138,6 +149,8 @@ nav img{
 }
 .eadvanceFeaturesOptions{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 90px;
 }
 .advanceOptionList{
@@ -205,8 +218,10 @@ nav img{
     margin-top: 80px;
 }
 .pricingCardDiv{
-    display: grid;
-    grid-template-columns: repeat(3,20vw);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(3,20vw); */
     gap: 30px;
 }
 .pricingCardDiv div:first-child, .pricingCardDiv div:last-child{
@@ -239,6 +254,7 @@ nav img{
 .pricingCardDiv p{
     font-size: 15px;
     font-weight: 500;
+    max-width: 260px;
 }
 .pricingCardDiv div:nth-child(2) h1 span{
     color: #85c5fe;
@@ -306,6 +322,7 @@ nav img{
 }
 .testemonySecHead{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 20px;
     justify-content: space-between;
@@ -333,7 +350,7 @@ nav img{
 .testemonyRating img{
     width: 20px;
 }
-.testemonyCard2{
+.testemonyCard2, .testemonyCard3{
     background-color: white;
 }
 .testemonyCardDiv h4{
@@ -348,12 +365,12 @@ nav img{
     padding: 0;
     margin-top: 25px;
 }
-.testemonyCard1 p, .testemonyCard2 p{
+.testemonyCard1 p, .testemonyCard2 p, .testemonyCard3 p{
     width: 30vw;
     font-size: 18px;
     line-height: 26px;
 }
-.testemonyCard2{
+.testemonyCard2, .testemonyCard3{
     border: 1px solid gray;
     border-radius: 15px;
     padding: 25px 35px 25px 20px;
@@ -388,6 +405,7 @@ footer h1{
     padding: 40px 30px;
     border-radius: 20px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .newsletterSubmit input{
@@ -416,6 +434,7 @@ footer h1{
 }
 .extraLinkDiv{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .extraLinkDiv ul{
@@ -435,4 +454,67 @@ footer h1{
 footer img{
     width: 120px;
     margin-top: 30px;
+}
+.featuresHeadHeading1{
+    font-size: 40px;
+     font-weight: 500; 
+     margin-top: 100px;
+}
+
+
+@media (max-width: 1100px){
+    .rightHeroSec{
+        padding-top: 40px;
+        margin-left:auto;
+    }
+    nav ul{
+        display: none;
+    }
+    .heroSection h1{
+        font-size: 35px;
+    }
+    .horBrands{
+        padding: 40px;
+    }
+    .featuresHead h1{
+        font-size: 35px;
+        margin-left: 10px;
+        /* background-color: aqua; */
+    }
+    .advanceFeatures h1{
+        font-size: 35px;
+    }
+    .pricingHead h1{
+        font-size: 35px;
+    }
+    .pricingHead{
+        gap: 0;
+    }
+
+    footer h1{
+        font-size: 30px;
+    max-width: 80vw;
+    }
+}
+
+
+@media (max-width:1000px){
+    .testemonyCard3{
+        display: none;
+    }
+    .testemonySec h1{
+        font-size: 35px;
+    }
+}
+
+@media ( max-width: 830px ){
+    .testemonyCard2{
+        display:none;
+    }
+    .testemonyCard1{
+        width: 100%;
+    }
+    .testemonyCard1 p{
+        width: 100%;
+    }
 }
