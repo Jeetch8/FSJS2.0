@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
 body{
     padding: 0;
     margin: 0;
@@ -39,7 +40,7 @@ nav ul{
 .heroMainPic{
     /* position: absolute; */
     margin-top: -100px;
-    margin-right: 140px;
+    margin-right: 140px; 
 }
 .heroLeftSection{
     display: block;
@@ -48,6 +49,7 @@ nav ul{
 .mainDiv{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .heroRightSection p{
     max-width: 26vw;
@@ -82,6 +84,8 @@ nav ul{
 .brandLogoStripe{
     display: flex;
     align-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-evenly;
     margin-top: 150px;
     margin-bottom: 200px;
@@ -97,6 +101,7 @@ nav ul{
 }
 .headphoneSpecsSec{
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     gap: 10vw;
     justify-content: center;
@@ -133,6 +138,7 @@ nav ul{
 }
 .headphoneCaseDiv{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10vw;
 }
@@ -158,7 +164,8 @@ nav ul{
     width: 20px;
 }
 .headphoenCaseImg img{
-    width: 19vw;
+    /* width: 19vw; */
+    min-width: 100px;
 }
 
 /* immense Music Section */
@@ -166,6 +173,7 @@ nav ul{
     display: flex;
     padding: 7vh 7vw;
     align-items: center;
+    flex-wrap: wrap-reverse;
     background-color: #1e1e21;
     justify-content: space-between;
 }
@@ -201,19 +209,25 @@ nav ul{
 }
 .allHeaphonesDiv{
     margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 15.5vw);
+    flex-wrap: wrap;
     gap: 70px;
+}
+.allHeadphonesRow1, .allHeadphonesRow2{
+    display: flex;
+    gap: 50px;
+}
+.allHeadphonesRow2{
+    margin-top: 70px;
 }
 
 .productOuterDiv{
     position: relative;
-    height: 36vh;
-    width: 15.5vw;
+    height: 270px;
+    width: 245px;
 }
 .productInnerDiv{
     background-color: #1e1e21;
-    height: 25vh;
+    height: 200px;
     margin-top: 80px;
     border-radius: 8px;
 }
@@ -223,7 +237,7 @@ nav ul{
     left: 3.1vw;
 }
 .productImg img{
-    width: 10vw;
+    width: 155px;
 }
 .productDetails{
     gap: 50px;
@@ -261,6 +275,7 @@ footer{
     margin-top: 150px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: flex-start;
     padding: 30px 150px;
 }
@@ -311,4 +326,82 @@ footer ul li:first-child{
     position: absolute;
     bottom: 14vh;
     right: 2vw;
+}
+
+
+@media(max-width:510px){
+    nav ul{
+        display: none;
+    }
+    .heroLeftSection{
+        margin-right: 0;
+    }
+    .heroRightSection{
+        margin: 0;
+        padding: 0;
+        margin-left: -50px;
+    }
+    .heroRightSecImg{
+        width: 40vw;
+        padding: 0;
+    }
+    .heroRightSection p{
+        max-width: 70vw;
+    }
+    .heroRightSection h1{
+        font-size: 45px;
+    }
+    .headphoneSpecLeft{
+        flex-direction: row;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .headphoenCaseImg{
+        margin: 0 auto;
+    }
+    .headphoneCaseDiv p, .headphoneCaseDiv button{
+        margin-left: 30px;
+    }
+    .immenseMusicContent{
+        min-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .immenseMusicContent h1{
+        min-width: 200px;
+    }
+    .immenseMusicContent button{
+        margin: 0 auto;
+    }
+    .immenseMusicSectionImg{
+        margin: 0 auto;
+    }
+    .immenseMusicSectionImg img{
+        min-width: 250px;
+    }
+    .allHeaphonesDiv{
+        margin-top: 40px;
+    }
+    .allHeadphonesRow1, .allHeadphonesRow2{
+        flex-wrap: wrap;
+    }
+    .productOuterDiv{
+        margin: 0 auto;
+    }
+    .productInnerDiv{
+        border-radius: 1px solid purple;
+    }
+    .productImg img{
+        margin: 0 28px;
+    }
+
+
+    footer{
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    footer ul{
+        margin-bottom: 50px;
+    }
 }
