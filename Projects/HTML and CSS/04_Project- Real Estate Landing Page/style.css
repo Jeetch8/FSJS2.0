@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-/* *{
+/* 
+*{
     outline: 1px solid #6663e9;
+    border: 1px solid orange;
 } */
 
 body{
@@ -17,7 +18,7 @@ nav{
     justify-content: space-between;
     margin: 0 50px 70px 50px;
     padding: 30px 30px 25px 30px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(193, 188, 188);
 }
 nav ul{
     display: flex;
@@ -34,6 +35,7 @@ nav img{
     background-image: url(./Photos/mainBackground.png);
     background-position: 50% 79%;
     background-repeat: no-repeat;
+    height: 91vh;
 }
 .heroSecContent{
     padding: 30px 50px;
@@ -60,21 +62,22 @@ nav img{
 }
 .logoStripe{
     display: flex;
-    position: absolute;
-    width: 81.5vw;
-    bottom: -8vh;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* width: 81.5vw; */
+    justify-content: space-evenly;
     background-color: white;
-    padding: 40px 100px 40px 100px;
+    padding: 40px 30px;
     border-radius: 10px;
-    margin: 30px 0px 30px 30px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    gap: 30px;
+    margin: -65px 30px 30px 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .logoStripe img{
     width: 120px;
 }
 .heroSecBackground{
     background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
 }
 
 /* Real estate catelog */
@@ -83,168 +86,255 @@ nav img{
     font-weight: 600;
     text-align: center;
     margin: 100px 0;
-}
-.realEstateCatelog{
-    display: grid;
-    grid-template-columns: repeat(3,20vw);
-    grid-template-rows: repeat(3, 40vh);
-    gap: 100px 30px;
-    justify-content: center;
-    margin-bottom: 150px;
-}
-.realEstateCatelog img{
-    width: 200px;
-}
-.realEstateCatelog div:nth-child(1) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage1.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(2) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage2.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(3) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage3.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(4) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage4.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(5) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage5.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(6) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage6.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(7) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage7.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(8) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage8.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.realEstateCatelog div:nth-child(9) .propertyCatelogBg{
-    border-radius:10px;
-    background-image: url(./Photos/cardImage9.png);
-    background-size: 200%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 38vh;
-    width: 20vw;
-}
-.propertyCardContent{
-    display: flex;
-    justify-content: space-between;
-    gap: 90px;
-    padding: 15px 13px;
-    border-radius: 10px;
-    align-items: center;
-    margin: 0 10px;
-    position: absolute;
-    background-color: white;
-    bottom: -15vh;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 200px;
 }
 
-.propertyCardContent h3{
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-}
-.propertyCardContent h4{
-    margin: 0;
-    padding: 0;
-    color: #6663e9;
-    font-size: 17px;
-    margin-top: 3px;
-}
-.propertyCardContent button{
-    background-color: #6663e9;
-    padding: 9px 22px;
-    border: none;
-    color: white;
-    border-radius: 20px;
-}
-.propertyCard{
-    position: relative;
-    border-radius: 10px;
+
+.realEstateCatelogRow1, .realEstateCatelogRow2, .realEstateCatelogRow3{
+    display: flex;
+    justify-content: center;
     margin-bottom: 100px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.realEstateCatelogRow1 .realEstateCard:nth-child(1){
+    background-image: url('./Photos/cardImage1.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 190%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow1 .realEstateCard:nth-child(2){
+    background-image: url('./Photos/cardImage2.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 10% 30%;
+    background-size: 165%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow1 .realEstateCard:nth-child(3){
+    background-image: url('./Photos/cardImage3.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 195%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow2 .realEstateCard:nth-child(1){
+    background-image: url('./Photos/cardImage4.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 195%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow2 .realEstateCard:nth-child(2){
+    background-image: url('./Photos/cardImage5.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 195%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow2 .realEstateCard:nth-child(3){
+    background-image: url('./Photos/cardImage6.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 195%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow3 .realEstateCard:nth-child(1){
+    background-image: url('./Photos/cardImage7.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 195%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow3 .realEstateCard:nth-child(2){
+    background-image: url('./Photos/cardImage8.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 50% 30%;
+    background-size: 110%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCatelogRow3 .realEstateCard:nth-child(3){
+    background-image: url('./Photos/cardImage9.png');
+    width: 380px;
+    height: 400px;
+    border-radius: 15px;
+    background-position: 75% 30%;
+    background-size: 185%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.realEstateCardContent, .realEstateCardContent:not(.realEstateCatelogRow2 .realEstateCardContent){
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 76%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    bottom: -8vh;
+    left: 1.5vw;
+    margin-top: 45vh;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: fit-content;
+}
+.realEstateCatelogRow2 .realEstateCard .realEstateCardContent{
+    margin-top: 45vh;
+    height: fit-content;
+}
+.realEstateCatelogRow2 .realEstateCard .realEstateCardContent h2, .realEstateCatelogRow2 .realEstateCard .realEstateCardContent h3{
+    margin: 0;
+    padding: 0;
+}
+.realEstateCatelogRow2 .realEstateCard .realEstateCardContent h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.realEstateCatelogRow2 .realEstateCard .realEstateCardContent h2{
+    padding-top: 15px;
+}
+.realEstateCardContent button{
+    background-color: #6663e9;
+    border: none;
+    padding: 10px 23px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.realEstateCardContent h3{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #5654d1;
+    padding-top: 10px;
+}
+.realEstateCardContent h2{
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.realEstateCatelogRow1 div:nth-child(2), .realEstateCatelogRow2 div:nth-child(2), .realEstateCatelogRow3 div:nth-child(2){
+    margin-top: 20px;
+}
+.realEstateCatelogRow1 div:nth-child(3), .realEstateCatelogRow3 div:nth-child(3){
+    margin-top: 40px;
+}
+.realEstateCatelogRow2 .realEstateCard:nth-child(1){
+    margin-top: 40px;
+}
+.realEstateCatelogRow1{
+    display: flex;
 }
 
 .propertFeature1{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 310px;
 }
 .propertFeature2{
+    margin: 200px 0;
     display: flex;
-}
-.propertFeatureImage{
-    width: 20vw;
-    height: 30vh;
-}
-.propertFeature1 .propertFeatureImage{
-    background-image: url(./Photos/featuresImage1.png);
-    background-position: center;
-    background-size: 120%;
-}
-.propertFeature2 .propertFeatureImage{
-    background-position: center;
-    background-size: 120%;
-    background-image: url(./Photos/featuresImage2.png);
-    /* margin-bottom: 200px; */
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
 }
 
 .propertFeature1 p, .propertFeature2 p{
-    max-width: 20vw;
+    max-width: 24vw;
+    color: gray;
+    line-height: 25px;
 }
-.propertyImageOuter1, .propertyImageOuter2{
+.propertFeature1 h1, .propertFeature2 h1{
+    font-size: 42px;
+    max-width: 23vw;
+    letter-spacing: 1.2px;
+}
+.propertFeature1 button, .propertFeature2 button{
     background-color: #6663e9;
-    padding: 20px;
-    height: 10vh;
-    /* margin-top: 20px; */
+    border: none;
+    color: white;
+    font-weight: 600;
+    height: 40px;
+    margin-top: 15px;
+    width: 160px;
+    border-radius: 50px;
+}
+.propertyImageOuter1{
+    background-color: #6663e9;
+    height: 310px;
+    border-radius: 0 30px 30px 0;
+    width: 499px;
+    justify-content: center;
+    display: flex;
+}
+.propertWhiteBorderLayer{
+    background-color: white;
+    margin: 50px;
+    margin-top: 0;
+    border-radius: 30px;
+    position: relative;
+    height: 265px;
+    width: 299px;
+}
+.propertFeatureImage{
+    position: absolute;
+    bottom: 2vh;
+    right: -6.5vw;
+}
+.propertFeatureImage img{
+    width: 384px;
+    height: 350px;
+    border-radius: 30px;
+}
+.propertyContent1{
+    padding-right: 100px;
+    margin-left: auto;
+}
+.propertyContent2{
+    padding-left: 100px;
+    margin-right: auto;
+}
+.propertyImageOuter2{
+    background-color: #6663e9;
+    height: 310px;
+    border-radius: 30px 0 0 30px;
+    width: 499px;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+}
+.propertyImageOuter2 .propertFeatureImage{
+    position: absolute;
+    bottom: 2vh;
+    right: 1vw;
 }
 
 
@@ -298,6 +388,7 @@ nav img{
 footer{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 40px 50px;
 }
 footer ul{
@@ -330,4 +421,119 @@ footer ul{
 .footerRightSec ul li{
     font-weight: 300;
     line-height: 45px;
+}
+
+
+
+@media (max-width:510px){
+    nav ul{
+        display: none;
+    }
+    nav{
+        padding: 20px 20px;
+        margin: 0;
+    }
+    .heroSection{
+        background-size: 220%;
+        margin: 0;
+        padding: 0;
+    }
+    .heroSection h1{
+        font-size: 34px;
+        max-width: 60vw;
+    }
+    .heroSection p{
+        max-width: 60vw;
+    }
+    .heroSecContent button{
+        margin-top: 20px;
+    }
+    .propertyImageOuter1 .propertFeatureImage{
+        bottom: 2vh;
+        left: -10vw;
+    }
+    .propertyImageOuter2 .propertFeatureImage{
+        bottom: 2vh;
+        left: -10vw;
+    }
+    .propertyContent1 h1{
+        max-width: 70vw;
+        font-size: 30px;
+    }
+    .propertyContent1 p{
+        max-width: 70vw;
+    } 
+    .propertyContent1{
+        padding: 0;
+        margin:  0 auto;
+    }
+    .propertyContent2 h1{
+        max-width: 70vw;
+        font-size: 30px;
+    }
+    .propertyContent2 p{
+        max-width: 70vw;
+    } 
+    .propertyContent2{
+        padding: 0;
+        margin:  0 auto;
+    }
+    .propertFeature2{
+        flex-wrap: wrap-reverse;
+    }
+    .newsLetterSubSection{
+        margin: 0;
+        border-radius: 0;
+        padding: 20px;
+    }
+    .newsLetterSubSection h1{
+        font-size: 30px;
+    }
+    .newsLetterSubSection p{
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        padding: 0;
+        padding-top: 20px;
+    }
+}
+
+
+@media (min-width:510px) and (max-width:950px){
+    .heroSection{
+        background-size: 180%;
+    }
+    .heroSecContent h1{
+        max-width: 40vw;
+    }
+    .realEstateCatelogRow1, .realEstateCatelogRow2, .realEstateCatelogRow3{
+        gap:  80px 30px;
+    }
+    .realEstateCatelogRow1 div:nth-child(2), .realEstateCatelogRow2 div:nth-child(2), .realEstateCatelogRow3 div:nth-child(2){
+        margin-top: 0px;
+    }
+    .realEstateCatelogRow1 div:nth-child(3), .realEstateCatelogRow3 div:nth-child(3){
+        margin-top: 0px;
+    }
+    .realEstateCatelogRow2 .realEstateCard:nth-child(1){
+        margin-top: 0px;
+    }
+}
+
+@media (min-width:510px) and (max-width:580px){
+    .heroSection{
+        background-size: 220%;
+    }
+}
+
+@media (min-width:510px) and (max-width:700px){
+    .newsLetterSubSection{
+        margin: 0;
+    }
+    footer{
+        background-color: antiquewhite;
+    }
 }
