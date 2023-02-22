@@ -52,7 +52,7 @@ nav ul{
     flex-wrap: wrap;
 }
 .heroRightSection p{
-    max-width: 26vw;
+    max-width: 280px;
     line-height: 27px;
     letter-spacing: 1.1px;
 }
@@ -167,6 +167,9 @@ nav ul{
     /* width: 19vw; */
     min-width: 100px;
 }
+.headphoenCaseImg{
+    margin:0 auto;
+}
 
 /* immense Music Section */
 .immenseMusicSection{
@@ -181,7 +184,7 @@ nav ul{
     width: 25vw;
 }
 .immenseMusicSection h1{
-    max-width: 17vw;
+    max-width:200px;
     line-height: 32px;
     font-size: 28px;
 }
@@ -197,6 +200,9 @@ nav ul{
 .immenseMusicSection p{
     color: gray;
     font-size: 15px;
+}
+.immenseMusicContent{
+    margin-left: 30px;
 }
 
 
@@ -214,6 +220,8 @@ nav ul{
 }
 .allHeadphonesRow1, .allHeadphonesRow2{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
 }
 .allHeadphonesRow2{
@@ -403,5 +411,12 @@ footer ul li:first-child{
     }
     footer ul{
         margin-bottom: 50px;
+    }
+}
+
+
+@media (max-width:1120px){
+    nav ul{
+        display: none;
     }
 }
