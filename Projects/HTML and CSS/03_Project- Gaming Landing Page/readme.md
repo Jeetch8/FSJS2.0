@@ -1,5 +1,5 @@
-# Replicate the Following Output
+### [Live website Link](https://sage-jalebi-9bcfd4.netlify.app/ "Click The Link")
 
-`Assests are Provided!`
+---
 
-![Project 3](./Gaming%20Landing%20Page.png)
+![Project 2](./Gaming%20Landing%20Page.png)

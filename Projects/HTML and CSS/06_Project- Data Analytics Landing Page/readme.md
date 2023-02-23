@@ -1,5 +1,5 @@
-# Replicate the Following Output
+### [Live website Link](https://glistening-fenglisu-5446ed.netlify.app/ "Click The Link")
 
-`Assests are Provided!`
+---
 
-![Project 6](./Data%20Analytics%20Landing%20page.png)
+![Project 2](./Data%20Analytics%20Landing%20page.png)
