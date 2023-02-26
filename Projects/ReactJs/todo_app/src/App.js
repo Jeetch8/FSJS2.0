@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import SingleItem from "./Components/SingleItem";
 import uuid from "react-uuid";
+import BackgroundTheme from "./Components/Background_Theme";
 
 function App() {
   const [list, setList] = useState([]);
+  const [bgLinkToShow, setBgLinkToShow] = useState(
+    "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg"
+  );
+  const [fontToShow, setFontToShow] = useState("font-nanum");
   const [taskCompletedList, setTaskCompletedList] = useState([]);
   const [taskInCompleteList, setTaskIncomplete] = useState([]);
   const [inputVal, setInputVal] = useState("");
@@ -32,17 +37,6 @@ function App() {
       }
     }
   }, []);
-
-  const backgroundList = [
-    "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg",
-    "https://images.pexels.com/photos/7919/pexels-photo.jpg",
-    "https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg",
-    "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg",
-    "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg",
-    "https://images.pexels.com/photos/552789/pexels-photo-552789.jpeg",
-    "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg",
-  ];
-  // ?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=50&w=60
 
   const jsonStringifyCompList = (arr) => {
     localStorage.setItem("todoCompletedList", JSON.stringify([...arr]));
@@ -180,22 +174,25 @@ function App() {
 
   return (
     <div
-      style={{ backgroundImage: `url(${backgroundList[0]})` }}
-      className="bg-cover h-[100vh] w-full text-white"
+      style={{ backgroundImage: `url(${bgLinkToShow})` }}
+      className={`bg-cover h-[100vh] w-full text-white ${fontToShow}`}
     >
+      <BackgroundTheme
+        setBgLinkToShow={setBgLinkToShow}
+        bgLinkToShow={bgLinkToShow}
+        fontToShow={fontToShow}
+        setFontToShow={setFontToShow}
+      />
       <div className="h-[80vh] my-auto bg-[rgba(0,0,0,0.3)] w-[40vw] mx-auto overflow-y-scroll">
-        <div className="flex justify-center pt-10">
+        <div className="flex justify-center mt-10 py-2 rounded-md border-2 border-black w-fit mx-auto px-4">
           <input
-            className="border-2 border-black bg-transparent"
+            className=" w-[300px] bg-[rgba(0,0,0,0.2)]"
             type="text"
             value={inputVal}
             onKeyDown={(e) => (e.key === "Enter" ? addItemToList() : null)}
             onChange={(e) => setInputVal(e.target.value)}
           />
-          <button
-            className="border-2 border-black"
-            onClick={() => addItemToList()}
-          >
+          <button className="px-4 py-1" onClick={() => addItemToList()}>
             Add
           </button>
         </div>
