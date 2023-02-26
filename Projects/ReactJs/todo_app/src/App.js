@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SingleItem from "./Components/SingleItem";
 import uuid from "react-uuid";
 
@@ -8,6 +8,30 @@ function App() {
   const [taskInCompleteList, setTaskIncomplete] = useState([]);
   const [inputVal, setInputVal] = useState("");
   const [taskStatus, setTaskStatus] = useState("InComplete");
+
+  useEffect(() => {
+    // const unParsedInCompList = localStorage.getItem("todoInCompleteList");
+    const parsedCompList = JSON.parse(
+      localStorage.getItem("todoCompletedList")
+    );
+    const parsedInCompList = JSON.parse(
+      localStorage.getItem("todoInCompleteList")
+    );
+    if (parsedCompList !== null) {
+      const tempArr = [...parsedCompList];
+      setTaskCompletedList([...tempArr]);
+      if (taskStatus === "Completed") {
+        setList([...tempArr]);
+      }
+    }
+    if (parsedInCompList !== null) {
+      const tempArr = [...parsedInCompList];
+      setTaskIncomplete([...tempArr]);
+      if (taskStatus === "InComplete") {
+        setList([...tempArr]);
+      }
+    }
+  }, []);
 
   const backgroundList = [
     "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg",
@@ -20,15 +44,26 @@ function App() {
   ];
   // ?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=50&w=60
 
+  const jsonStringifyCompList = (arr) => {
+    localStorage.setItem("todoCompletedList", JSON.stringify([...arr]));
+  };
+  const jsonStringifyInComplList = (arr) => {
+    localStorage.setItem("todoInCompleteList", JSON.stringify([...arr]));
+  };
+
   const addItemToList = () => {
     const itemId = uuid();
     const itemObj = { title: inputVal, checked: false, itemId };
-    setTaskIncomplete([...taskInCompleteList, itemObj]);
     if (taskStatus === "InComplete") {
-      setList([...list, itemObj]);
+      const tempArr = [...list, itemObj];
+      setList([...tempArr]);
+      jsonStringifyInComplList(tempArr);
+      setTaskIncomplete([...tempArr]);
     } else if (taskStatus === "Completed") {
+      const tempArr = [...taskInCompleteList, itemObj];
       setTaskStatus("InComplete");
-      setList([...taskInCompleteList, itemObj]);
+      jsonStringifyInComplList(tempArr);
+      setList([...tempArr]);
     }
     setInputVal("");
   };
@@ -48,47 +83,88 @@ function App() {
       return itemId === item.itemId;
     });
     if (taskStatus === "Completed" && itemIndex !== -1) {
-      taskCompletedList.splice(itemIndex, 1);
+      const arr = [...taskCompletedList];
+      arr.splice(itemIndex, 1);
+      jsonStringifyCompList(arr);
+      setTaskCompletedList([...arr]);
     } else if (taskStatus === "InComplete" && itemIndex !== -1) {
-      taskInCompleteList.splice(itemIndex, 1);
+      const arr = [...taskInCompleteList];
+      arr.splice(itemIndex, 1);
+      jsonStringifyInComplList(arr);
+      setTaskIncomplete([...arr]);
     }
     listCopy.splice(listItemIndex, 1);
     setList([...listCopy]);
   };
 
-  const changeItemTitle = (index, val) => {
-    const newArr = [...list];
-    newArr.splice(index, 1, val);
-    setList([...newArr]);
+  const changeItemTitle = (itemId, val) => {
+    if (taskStatus === "Completed") {
+      const tempArr = [...taskCompletedList];
+      const taskCompIndex = tempArr.findIndex((item) => {
+        return item.itemId === itemId;
+      });
+      tempArr[taskCompIndex].title = val;
+      setTaskCompletedList([...tempArr]);
+      jsonStringifyCompList(tempArr);
+      setList([...tempArr]);
+    } else if (taskStatus === "InComplete") {
+      const tempArr = [...taskInCompleteList];
+      const taskInCompIndex = tempArr.findIndex((item) => {
+        return item.itemId === itemId;
+      });
+      tempArr[taskInCompIndex].title = val;
+      setTaskIncomplete([...tempArr]);
+      jsonStringifyInComplList(tempArr);
+      setList([...tempArr]);
+    }
   };
 
   const changeTaskStatus = ({ itemId, title, status }) => {
     if (status) {
+      //status:true
+      // transfer incomplete to complete
       const taskInCompIndex = taskInCompleteList.findIndex((item) => {
         return item.itemId === itemId;
       });
       const listIndex = list.findIndex((item) => {
         return item.itemId === itemId;
       });
-      setTaskCompletedList([
-        ...taskCompletedList,
-        { itemId, title, checked: true },
-      ]);
-      taskInCompleteList.splice(taskInCompIndex, 1);
+      const tempArr = [...taskCompletedList, { itemId, title, checked: true }];
+      window.localStorage.clear();
+      setTaskCompletedList([...tempArr]);
+      jsonStringifyCompList(tempArr);
+      const arr = [...taskInCompleteList];
+      arr.splice(taskInCompIndex, 1);
+      setTaskIncomplete([...arr]);
+      console.log(arr);
+      jsonStringifyInComplList(arr);
       list.splice(listIndex, 1);
     } else if (!status) {
+      //status:false
+      // transfer complete to incomplete
       const taskCompIndex = taskCompletedList.findIndex((item) => {
         return item.itemId === itemId;
       });
       const listIndex = list.findIndex((item) => {
         return item.itemId === itemId;
       });
-      setTaskIncomplete([
+
+      // Adding item from CompleteList to incomplete
+      // Array copy
+      const tempArr = [
         ...taskInCompleteList,
-        { itemId, title, checked: false },
-      ]);
-      taskCompletedList.splice(taskCompIndex, 1);
-      list.splice(listIndex, 1);
+        { title, checked: false, itemId },
+        // incomplete task list
+      ];
+      window.localStorage.clear();
+      setTaskIncomplete([...tempArr]);
+      jsonStringifyInComplList(tempArr);
+      // Removing item from the task Complete List
+      const arr = [...taskCompletedList];
+      arr.splice(taskCompIndex, 1);
+      setTaskCompletedList([...arr]);
+      jsonStringifyCompList(arr);
+      setList([...arr]);
     }
   };
 
@@ -164,29 +240,3 @@ function App() {
 }
 
 export default App;
-
-// const changeTaskStatusVisible = (status) => {
-//   const localArr = [...document.querySelectorAll("input")];
-//   const checkBoxArr = [];
-//   const newArr = [];
-//   localArr.forEach((el) => {
-//     if (el.type === "checkbox") {
-//       checkBoxArr.push(el);
-//     }
-//   });
-//   if (status === "Completed") {
-//     setTaskStatus("Completed");
-//   } else if (status === "NotCompleted") {
-//     setTaskStatus("NotCompleted");
-//   }
-//   if (status === "Completed") {
-//     checkBoxArr.forEach((item) => {
-//       if (item.checked) newArr.push(item);
-//     });
-//   } else if (status === "NotCompleted") {
-//     checkBoxArr.forEach((item) => {
-//       if (!item.checked) newArr.push(item);
-//     });
-//   }
-//   setList([...newArr]);
-// };
