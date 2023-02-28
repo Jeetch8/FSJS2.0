@@ -10,8 +10,9 @@ const MealCard = () => {
   useEffect(() => {
     axios
       .get(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${params.meal}`
+        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.mealId}`
       )
+      // .then((res) => console.log(res.data));
       .then((res) => res.data.meals[0])
       .then((meal) => intialProcess(meal));
   }, []);
@@ -57,7 +58,11 @@ const MealCard = () => {
               <div key={index}>
                 <img
                   src={`https://www.themealdb.com/images/ingredients/${
-                    image[image.length - 1]
+                    image.length > 3
+                      ? image[image.length - 2] +
+                        `%20` +
+                        image[image.length - 1]
+                      : image[image.length - 1]
                   }.png`}
                   alt={image[image.length - 1]}
                 />
