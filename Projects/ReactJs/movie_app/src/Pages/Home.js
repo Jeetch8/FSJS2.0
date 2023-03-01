@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useQuery, useInfiniteQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
 import RiseLoader from "react-spinners/RiseLoader";
 import SearchBar from "../Components/SearchBar";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState(
     `https://www.omdbapi.com/?apikey=f9fae970&s=lone`
   );
-
+  const breakpointColumnsObj = {
+    default: 5,
+    1100: 4,
+    700: 2,
+    500: 1,
+  };
   const fetchAxios = async ({ pageParam = 1 }) => {
     const res = await axios.get(`${searchQuery}&page=${pageParam}`);
     return res.data;
@@ -28,9 +35,6 @@ const Home = () => {
       } else if (allpages.length * 10 < allpages[0].totalResults) {
         return allpages.length + 1;
       }
-    },
-    onSuccess: (e) => {
-      console.log(e, "e");
     },
   });
 
@@ -81,6 +85,8 @@ const Home = () => {
     );
   }
 
+  console.log(data);
+
   return (
     <div>
       {isRefetching && (
@@ -93,16 +99,22 @@ const Home = () => {
         setSearchQuery={setSearchQuery}
         refetch={refetch}
       />
-      <div className="flex flex-wrap gap-6">
-        {data?.pages.map((page, index) => {
+      <div className="flex flex-wrap gap-6 justify-center">
+        {data?.pages.map((page) => {
           if (data?.pages[data?.pages.length - 1].Error === "Movie not found!")
             return;
           return page.Search.map((movie) => {
             return (
-              <div>
-                <img src={movie.Poster} alt="" />
+              <div
+                key={movie.imdbID}
+                onClick={() => navigate(`/movie/${movie.imdbID}`)}
+                className="pt-10 border-t-2 px-4 cursor-pointer"
+              >
+                <img src={movie.Poster} alt={movie.Title} className="mx-auto" />
                 <div>
-                  <h3 className="max-w-[18vw]">Title: {movie.Title}</h3>
+                  <h3 className="max-w-[18vw] font-medium">
+                    Title: {movie.Title}
+                  </h3>
                   <h3>Year: {movie.Year}</h3>
                 </div>
               </div>
