@@ -55,7 +55,9 @@ export default function CardsSection() {
   console.log(pokemonList);
   return (
     <>
-      <button onClick={() => queryNextArray()}>Query</button>
+      <h2 className="text-[25px] pt-10 mb-4 border-t-2 border-zinc-300 w-[300px] mx-auto mt-4">
+        All Pokemon Cards
+      </h2>
       <Swiper
         effect={"cards"}
         grabCursor={true}
