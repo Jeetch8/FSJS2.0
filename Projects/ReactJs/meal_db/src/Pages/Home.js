@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import AreaSec from "../Components/AreaSec";
 import CategorySec from "../Components/CategorySec";
 import MealCard from "../Components/MealCard";
 
@@ -8,17 +7,36 @@ function Home() {
   const [mealToShow, setMealToShow] = useState([]);
   const [randGen, setRangen] = useState(false);
   const [userInp, setUserInp] = useState("");
-  const [searchBy, setSearchBy] = useState("");
-  // useEffect(() => {
-  //   axios
-  //     .get("https://www.themealdb.com/api/json/v1/1/random.php")
-  //     .then((res) => setMealToShow([...res.data.meals]));
-  // }, [randGen]);
+  const [queryStatus, setQueryStatus] = useState("idle");
+  const [searchBy, setSearchBy] = useState("search.php?s=");
+  useEffect(() => {
+    setQueryStatus("fetching");
+    axios
+      .get("https://www.themealdb.com/api/json/v1/1/random.php")
+      .then((res) => setMealToShow([...res.data.meals]))
+      .then(setQueryStatus("resolved"));
+  }, [randGen]);
 
   const fetchNewRecipe = () => {
+    setQueryStatus("fetching");
     axios
-      .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${userInp}`)
-      .then((res) => setMealToShow([...res.data.meals]));
+      .get(`https://www.themealdb.com/api/json/v1/1/${searchBy}${userInp}`)
+      .then((res) =>
+        res.data.meals !== null
+          ? setMealToShow([...res.data.meals])
+          : setMealToShow(null)
+      )
+      .then((meal) =>
+        meal === null ? setQueryStatus("rejected") : setQueryStatus("resolved")
+      );
+  };
+
+  const selectChangeFunc = (selectedOption) => {
+    if (selectedOption === "byIngredient") {
+      setSearchBy("filter.php?i=");
+    } else if (selectedOption === "byName") {
+      setSearchBy("search.php?s=");
+    }
   };
   return (
     <div>
@@ -31,14 +49,19 @@ function Home() {
             className="outline-none"
             onChange={(e) => setUserInp(e.target.value)}
             value={userInp}
-            onKeyDown={(e) => (e.key === "Enter" ? fetchNewRecipe() : null)}
+            onKeyDown={(e) => e.key === "Enter" && fetchNewRecipe()}
           />
         </div>
         <div className="flex items-center border-2 border-black py-2 px-4 rounded-md">
           <h3 className="font-bold">Search for: </h3>
-          <select name="" id="" className="bg-[rgba(0,0,0,0.1)]">
-            <option value="">Meal Name</option>
-            <option value="">Ingredient name</option>
+          <select
+            name=""
+            id=""
+            className="bg-[rgba(0,0,0,0.1)]"
+            onChange={(e) => selectChangeFunc(e.target.value)}
+          >
+            <option value="byName">Meal Name</option>
+            <option value="byIngredient">Ingredient name</option>
           </select>
         </div>
         <button onClick={() => fetchNewRecipe()} className="bg-zinc-200 p-2">
@@ -49,14 +72,29 @@ function Home() {
         </button>
       </div>
       <div className="flex justify-center flex-wrap gap-2">
-        {mealToShow.map((meal) => {
-          return <MealCard meal={meal} />;
-        })}
+        {mealToShow !== null ? (
+          mealToShow.map((meal) => {
+            return (
+              <MealCard
+                meal={meal}
+                key={meal.idMeal}
+                queryStatus={queryStatus}
+              />
+            );
+          })
+        ) : (
+          <div className="border-2 border-black rounded-lg h-[370px] w-[350px] font-semibold">
+            Please try again with different name or check the spelling
+          </div>
+        )}
       </div>
       <CategorySec />
-      <AreaSec />
     </div>
   );
 }
 
 export default Home;
+
+// if (meal === null) {
+//   return <div>Please try again with differnt name or check the spelling</div>;
+// }
