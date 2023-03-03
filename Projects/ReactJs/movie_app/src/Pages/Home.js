@@ -10,12 +10,6 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState(
     `https://www.omdbapi.com/?apikey=f9fae970&s=lone`
   );
-  const breakpointColumnsObj = {
-    default: 5,
-    1100: 4,
-    700: 2,
-    500: 1,
-  };
   const fetchAxios = async ({ pageParam = 1 }) => {
     const res = await axios.get(`${searchQuery}&page=${pageParam}`);
     return res.data;
@@ -28,6 +22,7 @@ const Home = () => {
     refetch,
     isFetchingNextPage,
     isRefetching,
+    isLoading,
   } = useInfiniteQuery(["infinteQuery"], fetchAxios, {
     getNextPageParam: (firstPage, allpages) => {
       if (allpages.length * 10 >= allpages[0].totalResults) {
@@ -63,10 +58,17 @@ const Home = () => {
           setSearchQuery={setSearchQuery}
           refetch={refetch}
         />
-        <div className="flex justify-center items-center">
-          <h2 className="font-medium text-[19px]">
-            No movie found! please try again
-          </h2>
+        <div className="relative">
+          <div className="flex justify-center items-center">
+            <h2 className="font-medium text-[19px]">
+              No movie found! please try again
+            </h2>
+          </div>
+          {(isRefetching || isLoading) && (
+            <div className="absolute h-[85vh] w-[100%] bg-[rgba(0,0,0,0.3)] top-0 left-0 flex justify-center items-center">
+              <RiseLoader color="green" />
+            </div>
+          )}
         </div>
       </div>
     );
@@ -78,8 +80,15 @@ const Home = () => {
           setSearchQuery={setSearchQuery}
           refetch={refetch}
         />
-        <div className="flex justify-center items-center">
-          <h2 className="font-medium text-[19px]">{data?.pages[0].Error}</h2>
+        <div className="relative">
+          <div className="flex justify-center items-center">
+            <h2 className="font-medium text-[19px]">{data?.pages[0].Error}</h2>
+          </div>
+          {(isRefetching || isLoading) && (
+            <div className="absolute h-[85vh] w-[100%] bg-[rgba(0,0,0,0.3)] top-20 left-0 flex justify-center items-center">
+              <RiseLoader color="green" />
+            </div>
+          )}
         </div>
       </div>
     );
@@ -89,17 +98,12 @@ const Home = () => {
 
   return (
     <div>
-      {isRefetching && (
-        <div className="absolute h-[85vh] w-[100%] bg-[rgba(0,0,0,0.3)] bottom-0 left-0 flex justify-center items-center">
-          <RiseLoader color="green" />
-        </div>
-      )}
       <SearchBar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         refetch={refetch}
       />
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="flex flex-wrap gap-6 justify-center relative">
         {data?.pages.map((page) => {
           if (data?.pages[data?.pages.length - 1].Error === "Movie not found!")
             return;
@@ -121,9 +125,14 @@ const Home = () => {
             );
           });
         })}
+        {(isRefetching || isLoading) && (
+          <div className="absolute h-[85vh] w-[100%] bg-[rgba(0,0,0,0.3)] top-0 left-0 flex justify-center items-center">
+            <RiseLoader color="green" />
+          </div>
+        )}
       </div>
       <div className="h-[20vh] flex justify-center items-center">
-        {isFetchingNextPage ? <RiseLoader /> : null}
+        {isFetchingNextPage && <RiseLoader />}
       </div>
     </div>
   );
