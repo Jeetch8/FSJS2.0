@@ -5,18 +5,24 @@ import SingleCard from "./SingleCard";
 const SearchSection = () => {
   const [userInput, setUserInput] = useState("");
   const [searchResults, setSearchResults] = useState(null);
+  const [queryStatus, setQueryStatus] = useState("idle");
   const searchPokemonFunc = () => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${userInput}`).then((res) => {
-      const resData = res.data;
-      console.log(resData);
-      setSearchResults({
-        id: resData.id,
-        name: resData.name,
-        image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${resData.id}.png`,
-        stats: [...resData.stats],
-      });
-    });
+    setQueryStatus("fetching");
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${userInput}`)
+      .then((res) => {
+        const resData = res.data;
+        setSearchResults({
+          id: resData.id,
+          name: resData.name,
+          image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${resData.id}.png`,
+          stats: [...resData.stats],
+        });
+        setQueryStatus("resolved");
+      })
+      .catch((err) => setQueryStatus("rejected"));
   };
+  console.log(queryStatus);
   return (
     <div>
       <div className="border-2 border-black w-fit mx-auto my-6 px-6 py-2">
@@ -34,7 +40,7 @@ const SearchSection = () => {
         </button>
       </div>
       <div className="w-full flex justify-center">
-        <SingleCard searchResults={searchResults} />
+        <SingleCard searchResults={searchResults} queryStatus={queryStatus} />
       </div>
     </div>
   );

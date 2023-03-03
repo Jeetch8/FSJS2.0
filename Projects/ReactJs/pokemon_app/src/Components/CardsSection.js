@@ -52,7 +52,6 @@ export default function CardsSection() {
       setPokemonList([...pokemonList, ...temparr]);
     }
   };
-  console.log(pokemonList);
   return (
     <>
       <h2 className="text-[25px] pt-10 mb-4 border-t-2 border-zinc-300 w-[300px] mx-auto mt-4">
@@ -68,7 +67,6 @@ export default function CardsSection() {
         }
       >
         {pokemonList?.map((item) => {
-          // if (pokemonList.length - 4 === item.id) queryNextArray();
           const capLetter =
             item.name.charAt(0).toUpperCase() + item.name.slice(1);
           return (
